@@ -1,0 +1,821 @@
+# ITALIAN translation of grsync.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the grsync package.
+#
+# Bojan Vondra <bojanvondra@hotmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-23 15:21+0100\n"
+"PO-Revision-Date: 2012-03-20 11:05+0100\n"
+"Last-Translator: Bojan Vondra <bojanvondra@hotmail.com>\n"
+"Language-Team: Italian <kde-i18n-doc@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../grsync.glade.h:1
+msgid "Grsync"
+msgstr "Grsync"
+
+#: ../grsync.glade.h:2
+msgid "_File"
+msgstr "D_atoteka"
+
+#: ../grsync.glade.h:3
+msgid "Browse S_ource"
+msgstr "Navigacija izv_ora"
+
+#: ../grsync.glade.h:4
+msgid "Browse _Destination"
+msgstr "Navigacija odre_dišta"
+
+#: ../grsync.glade.h:5
+#, fuzzy
+msgid "Switch source with destination"
+msgstr "Izmjeni izvor s odredištem"
+
+#: ../grsync.glade.h:6
+msgid "_Simulation"
+msgstr "_Simulacija"
+
+#: ../grsync.glade.h:7
+msgid "_Rsync command line"
+msgstr "Naredbena linija _Rsync-a"
+
+#: ../grsync.glade.h:8
+#, fuzzy
+msgid "Sess_ions"
+msgstr "Sjedn_ice"
+
+#: ../grsync.glade.h:9
+msgid "_Import"
+msgstr "_Uvoz"
+
+#: ../grsync.glade.h:10
+msgid "_Export"
+msgstr "_Izvoz"
+
+#: ../grsync.glade.h:11
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../grsync.glade.h:12
+msgid "_Rsync info"
+msgstr "Informacije o _Rsync-u"
+
+#: ../grsync.glade.h:13
+msgid "_Contribute"
+msgstr "_Doprinos"
+
+#: ../grsync.glade.h:14
+msgid "Click to add a new session"
+msgstr "Kliknite za dodavanje nove sjednice"
+
+#: ../grsync.glade.h:15
+msgid "Click to delete the current session"
+msgstr "Kliknite za brisanje trenutne sjednice"
+
+#: ../grsync.glade.h:16
+msgid ""
+"Show what would have been done, but actually do nothing (\"dry-run\" in "
+"rsync language)"
+msgstr ""
+"Prikaži što bi se napravilo, ali stvarno ne radi ništa (u jeziku rsync-a, "
+"\"dry-run\")"
+
+#: ../grsync.glade.h:17
+msgid "_Simulate"
+msgstr "_Simuliraj"
+
+#: ../grsync.glade.h:18
+msgid "Make a full run (go!)"
+msgstr "Izvrši puno pokretanje (idi!)"
+
+#: ../grsync.glade.h:19
+msgid "Preserve group"
+msgstr "Zadrži grupu"
+
+#: ../grsync.glade.h:20
+msgid "Preserve time"
+msgstr "Zadrži vrijeme"
+
+#: ../grsync.glade.h:21
+msgid "Preserve permissions"
+msgstr "Zadrži ovlasti"
+
+#: ../grsync.glade.h:22
+msgid "Preserve owner"
+msgstr "Zadrži vlasnika"
+
+#: ../grsync.glade.h:23
+msgid "Do not leave filesystem"
+msgstr "Nemoj izaći iz datotečnog sustava"
+
+#: ../grsync.glade.h:24
+msgid "Do not cross filesystem boundaries"
+msgstr "Nemoj prijeći granice datotečnog sustava"
+
+#: ../grsync.glade.h:25
+msgid "Delete on destination"
+msgstr "Obrisati na odredištu"
+
+#: ../grsync.glade.h:26
+msgid "Delete files in destination which are not present in the source"
+msgstr "Obrisati datoteke na odredištu ukoliko nisu sadržane u izvoru"
+
+#: ../grsync.glade.h:27
+msgid "Verbose"
+msgstr "Opširno"
+
+#: ../grsync.glade.h:28
+msgid "Show more information"
+msgstr "Prikaži više informacija"
+
+#: ../grsync.glade.h:29
+msgid "Show transfer progress"
+msgstr "Prikaži napredak prijenosa"
+
+#: ../grsync.glade.h:30
+msgid "Ignore existing"
+msgstr "Zanemari postojeće"
+
+#: ../grsync.glade.h:31
+msgid "Ignore files which already exist in the destination"
+msgstr "Zanemari datoteke koje već postoje na odredištu"
+
+#: ../grsync.glade.h:32
+msgid "Size only"
+msgstr "Samo veličina"
+
+#: ../grsync.glade.h:33
+msgid "Check size only, ignore time and checksum"
+msgstr "Provjeri samo veličinu, zanemari vrijeme i kontrolni zbroj"
+
+#: ../grsync.glade.h:34
+msgid "Skip newer"
+msgstr "Preskoči novije"
+
+#: ../grsync.glade.h:35
+msgid "Do not update newer files"
+msgstr "Nemoj osvježiti novije datoteke"
+
+#: ../grsync.glade.h:36
+msgid "Windows compatibility"
+msgstr "Kompatibilnost s operacijskim sustavom Windows"
+
+#: ../grsync.glade.h:37
+msgid "Provides workaround for a windows FAT filesystem limitation"
+msgstr "Omogućuje izbjegavanje ograničenja Windows FAT datotečnog sustava"
+
+#: ../grsync.glade.h:38
+msgid "Click to open the file browser"
+msgstr "Kliknite za otvaranje navigacije datoteka"
+
+#: ../grsync.glade.h:39
+msgid "Source directory"
+msgstr "Izvorna mapa"
+
+#: ../grsync.glade.h:40
+msgid "Destination directory"
+msgstr "Odredišna mapa"
+
+#: ../grsync.glade.h:41
+msgid "Click here to switch the source with the destination directory"
+msgstr "Kliknite ovdje za međusobnu izmjenu izvorne i odredišne mape"
+
+#: ../grsync.glade.h:42
+msgid "Source and Destination:"
+msgstr "Izvor i odredište:"
+
+#: ../grsync.glade.h:43
+msgid "Basic options"
+msgstr "Osnovne opcije"
+
+#: ../grsync.glade.h:44
+msgid "Always checksum"
+msgstr "Uvijek napravi kontrolni zbroj"
+
+#: ../grsync.glade.h:45
+msgid "Always compare file contents (by checksum)"
+msgstr "Uvijek usporedi sadržaj datoteke (koristeći kontrolni zbroj)"
+
+#: ../grsync.glade.h:46
+msgid "Preserve devices"
+msgstr "Zadrži uređaje"
+
+#: ../grsync.glade.h:47
+msgid "Only update existing files"
+msgstr "Osvježi samo postojeće datoteke"
+
+#: ../grsync.glade.h:48
+msgid "Keep partially transferred files"
+msgstr "Zadrži djelomično prenesene datoteke"
+
+#: ../grsync.glade.h:49
+msgid "Don't map uid/gid values"
+msgstr "Nemoj mapirati vrijednosti za uid/gid"
+
+#: ../grsync.glade.h:50
+msgid "Keep numeric uid/gid instead of mapping user names and group names"
+msgstr ""
+"Zadrži numeričke vrijednosti uid/gid umjesto mapiranja korisničkog imena i "
+"imena grupe"
+
+#: ../grsync.glade.h:51
+msgid "Additional options:"
+msgstr "Dodatne opcije:"
+
+#: ../grsync.glade.h:52
+msgid "Compress file data"
+msgstr "Komprimirati podatke"
+
+#: ../grsync.glade.h:53
+msgid ""
+"Compress file data when transferring (useful only if at least one side is "
+"remote)"
+msgstr ""
+"Komprimirati podatke za vrijeme prijenosa (korisno samo ukoliko je najmanje "
+"jedna strana udaljena)"
+
+#: ../grsync.glade.h:54
+msgid "Copy symlinks as symlinks"
+msgstr "Kopirati simboličke poveznice kao simboličke poveznice"
+
+#: ../grsync.glade.h:55
+msgid "Symbolic links are copied as such, do not copy link target file"
+msgstr ""
+"Simboličke poveznice su kopirane kao takve, ne kopirati povezanu datoteku"
+
+#: ../grsync.glade.h:56
+msgid "Make backups"
+msgstr "Napravi sigurnosne kopije"
+
+#: ../grsync.glade.h:57
+msgid "Make backups of existing files on the destination"
+msgstr "napravi sigurnosne kopije postojeći datoteka na odredištu"
+
+#: ../grsync.glade.h:58
+msgid "Copy hardlinks as hardlinks"
+msgstr "Kopiraj poveznicu kao poveznicu"
+
+#: ../grsync.glade.h:59
+msgid "Hard links are copied as such, do not copy link target file"
+msgstr "Poveznice su kopirane kao takve, ne kopirati povezanu datoteku"
+
+#: ../grsync.glade.h:60
+msgid "Show itemized changes list"
+msgstr "Prikazi detaljan popis promjena"
+
+#: ../grsync.glade.h:61
+msgid "Show additional information on every changed file"
+msgstr "Prikaži dodatne informacije za svaku promijenjenu datoteku"
+
+#: ../grsync.glade.h:62
+msgid "Disable recursion"
+msgstr "Onemogućiti rekurziju"
+
+#: ../grsync.glade.h:63
+msgid "If checked the subdirectories of the source folder will be ignored"
+msgstr "Ukoliko je označeno, podmape izvorne mape bit će zanemarene"
+
+#: ../grsync.glade.h:64
+msgid "Additional command line options to pass to the rsync program"
+msgstr "Dodatne opcije naredbene linije za proslijediti programu rsync"
+
+#: ../grsync.glade.h:65
+msgid "Protect remote args"
+msgstr "Zaštiti udaljene argumente"
+
+#: ../grsync.glade.h:66
+msgid ""
+"Protect remote arguments from shell expansion, Avoids the need to manually "
+"escape remote folders and other options which use file names like --exclude"
+msgstr ""
+"Zaštititi argumente za udaljenu točku od ekspanzije iz naredbene linije. "
+"Izbjegava potrebu ručnog izlaza iz mapa udaljene točke i drugih opcija koje "
+"koriste ime datoteke poput --exclude"
+
+#: ../grsync.glade.h:67
+msgid "Advanced options"
+msgstr "Napredne opcije:"
+
+#: ../grsync.glade.h:68
+msgid "Execute this command before rsync:"
+msgstr "Izvršiti ovu naredbu prije rsync-a:"
+
+#: ../grsync.glade.h:69
+msgid ""
+"Click on this item if you want to run a command before syncing. Can be "
+"useful, for instance, to mount a filesystem before starting or to do some "
+"cleanup."
+msgstr ""
+"Birati ovu opciju ukoliko se želi pokrenuti naredba prije sinkronizacije, na "
+"primjer montiranje uređaja ili pokretanje određenog čišćenja."
+
+#: ../grsync.glade.h:70
+msgid "Execute this command after rsync:"
+msgstr "Izvršiti ovu naredbu nakon rsync-a:"
+
+#: ../grsync.glade.h:71
+msgid ""
+"Click on this item if you want to run a command after syncing. Can be "
+"useful, for instance, to unmount a filesystem at the end or to do some "
+"cleanup."
+msgstr ""
+"Birati ovu opciju ako se želi pokrenuti naredba nakon sinkronizacije. Na "
+"primjer, može biti korisno za uklanjanje uređaja ili za pokretanje određenog "
+"čišćenja."
+
+#: ../grsync.glade.h:72
+msgid "Browse files instead of folders"
+msgstr "Navigacija datoteka umjesto mapa"
+
+#: ../grsync.glade.h:73
+msgid ""
+"By setting this switch, the browse source and destination buttons will open "
+"a dialog for selecting files instead of folders"
+msgstr ""
+"Biranjem ove opcije, dugmad za navigaciju izvora i odredišta otvoriti će "
+"dijalog za izbor datoteka umjesto mapa"
+
+#: ../grsync.glade.h:74
+msgid "Halt on failure"
+msgstr "Zaustavi ukoliko je greška"
+
+#: ../grsync.glade.h:75
+msgid ""
+"When running the \"before\" command, if it fails for some reason, don't run "
+"rsync and halt"
+msgstr ""
+"Ukoliko ja naredba \"prije\" neuspješna iz nekog razloga, nemoj pokrenuti "
+"rsync i zaustavi se"
+
+#: ../grsync.glade.h:76
+msgid "On rsync error only"
+msgstr "Samo pri greški rsync-a"
+
+#: ../grsync.glade.h:77
+msgid ""
+"Execute the \"after\" command only if syncronization had errors.\n"
+"For example can be used to send an email only in the case there was "
+"trouble.\n"
+"Try a command like \"mail -s 'rsync error' you@domain.com\"."
+msgstr ""
+"Izvrši naredbu \"nakon\" jedino ako je sinkronizacija imala grešku.\n"
+"Na primjer, može se koristiti za slanje pošte jedino u slučaju ako je bilo "
+"problema.\n"
+"Pokušajte naredbu poput \"mail -s 'rsync error' you@domain.com\"."
+
+#: ../grsync.glade.h:80
+msgid "Notes:"
+msgstr "Bilješke:"
+
+#: ../grsync.glade.h:81
+msgid "Free text notes on the current session"
+msgstr "Slobodne tekstualne zabilješke trenutne sjednice"
+
+#: ../grsync.glade.h:82
+msgid "Run as superuser"
+msgstr "Pokreni kao superuser"
+
+#: ../grsync.glade.h:83
+msgid ""
+"Run rsync with superuser (root, administrator) privileges. Use this if you "
+"need to access system files, for example when doing a full system backup."
+msgstr ""
+"Pokreni rsync sa superuser (root, administrator) ovlastima.  Koristiti ovu "
+"opciju ako se želi pristupiti datotekama sustava, npr. kada se radi puna "
+"sigurnosna kopija sustava"
+
+#: ../grsync.glade.h:84
+msgid "Extra options"
+msgstr "Dodatne opcije"
+
+#: ../grsync.glade.h:85
+msgid "Include these sessions:"
+msgstr "Uvrsti ove sesije:"
+
+#: ../grsync.glade.h:86
+msgid "Set options"
+msgstr "Opcije postavki"
+
+#: ../grsync.glade.h:87
+msgid "Add session"
+msgstr "Dodaj sjednicu"
+
+#: ../grsync.glade.h:88
+msgid "Enter session name you want to create:"
+msgstr "Unesite ime sjednice koju želite napraviti:"
+
+#: ../grsync.glade.h:89
+msgid "Enter the name of the new session to create"
+msgstr "Unesite ime sjednice koju želite napraviti:"
+
+#: ../grsync.glade.h:90
+msgid "Add as session set"
+msgstr "Dodaj sjednicu"
+
+#: ../grsync.glade.h:91
+msgid "Create a new session set instead of a normal session"
+msgstr "Napraviti novu sjednicu umjesto normalne sjednice"
+
+#: ../grsync.glade.h:92
+msgid "Grsync preferences"
+msgstr "Grsync postavke"
+
+#: ../grsync.glade.h:93
+msgid "Show rsync output by default"
+msgstr "Prikaži izlaz rsync-a kao početno stanje"
+
+#: ../grsync.glade.h:94
+msgid ""
+"Wether to show rsync output by default or hide it (show graphical "
+"information only)"
+msgstr ""
+"Da li prikazati izlaz rsync-a kao početno stanje ili ga sakriti (prikazati "
+"samo grafičku informaciju)"
+
+#: ../grsync.glade.h:95
+msgid "Remember last used session"
+msgstr "Zapamti zadnju korištenu sjednicu"
+
+#: ../grsync.glade.h:96
+msgid "Whether to load the last used session at startup or use the default one"
+msgstr ""
+"Da li prilikom početnog pokretanja učitati zadnju sjednicu ili koristiti "
+"definiranu početnu"
+
+#: ../grsync.glade.h:97
+msgid "Show error list when finished"
+msgstr "Prikaži popis greški kada je gotovo"
+
+#: ../grsync.glade.h:98
+msgid ""
+"When rsync has finished, show all the errors encountered in a separate window"
+msgstr "Kada je rsync gotov, prikazati sve greške u posebnom prozoru"
+
+#: ../grsync.glade.h:99
+msgid "Enable logging"
+msgstr "Omogući dnevnik"
+
+#: ../grsync.glade.h:100
+msgid ""
+"Whether to save rsync output to a log file, named like the session, which "
+"will be located in the grsync directory (usually \".grsync\" into your user "
+"home)"
+msgstr ""
+"Da li pohraniti izlaz rsync-a u datoteku dnevnika, nazvanu po imenu "
+"sjednice, koja će biti locirana u map grsync-a (uobičajeno \".grsync\" u "
+"početnoj mapi korisnika)"
+
+#: ../grsync.glade.h:101
+msgid "Enter the rsync command to use, eventually including its full path"
+msgstr ""
+"Unesite rsync naredbu koja će se koristiti, može sadržavati njenu punu "
+"putanju"
+
+#: ../grsync.glade.h:102
+msgid "Rsync executable:"
+msgstr "Izvršni rsync:"
+
+#: ../grsync.glade.h:103
+msgid "Fast rsync output scrolling"
+msgstr "Brzi izlist rsync izlaza"
+
+#: ../grsync.glade.h:104
+msgid ""
+"Select this if you want rsync output to scroll many lines at a time, in "
+"order to be faster"
+msgstr ""
+"Odaberite ukoliko želite da rsync izlista mnogo linija odjednom, kako bi bio "
+"brži"
+
+#: ../grsync.glade.h:105
+msgid "Enable switch button"
+msgstr "Dozvoli dugme za izmjenu izvora i odredišta"
+
+#: ../grsync.glade.h:106
+msgid ""
+"Select this if you want an additional \"switch source with destination\" "
+"button in the basic options tab"
+msgstr ""
+"Odaberite ako želite dodatno dugme \"zamijeni izvor s odredištem\" u kartici "
+"osnovnih opcija"
+
+#: ../grsync.glade.h:107
+msgid "Use tray icon"
+msgstr "Koristi ikonu u obavijesnoj površini"
+
+#: ../grsync.glade.h:108
+msgid ""
+"Check this box to show an icon of the application in the system tray instead "
+"of the application bar (may not work on Unity environments, like Ubuntu >= "
+"11.4)"
+msgstr ""
+"Odabrati ovu opciju ako se želi prikazati ikona aplikacije u obavijesnoj "
+"površini (možda neće raditi na okruženju Unity, kao Ubuntu >= 11.4)"
+
+#: ../grsync.glade.h:109
+msgid "Overwrite logs"
+msgstr ""
+
+#: ../grsync.glade.h:110
+msgid ""
+"Whether to overwrite the logs when running a session. This will make you "
+"save space, but you'll loose the logs of the previous runs"
+msgstr ""
+
+#: ../grsync.glade.h:111
+msgid "Errors list"
+msgstr "Popis grešaka"
+
+#: ../grsync.glade.h:112
+msgid "Error list of last rsync run:"
+msgstr "Popis grešaka prilikom zadnjeg pokretanja rsync-a:"
+
+#: ../grsync.glade.h:113
+msgid "rsync"
+msgstr "rsync"
+
+#: ../grsync.glade.h:114
+msgid "Idle"
+msgstr "U mirovanju"
+
+#: ../grsync.glade.h:115
+msgid "Transfer progress of current file"
+msgstr "Progres prijenosa trenutne datoteke"
+
+#: ../grsync.glade.h:116
+msgid "Global progress"
+msgstr "Globalni napredak"
+
+#: ../grsync.glade.h:117
+msgid ""
+"Global transfer progress: works only with rsync version 2.6.1 or newer, and "
+"may report wrong values depending on the ability of rsync to estimate the "
+"files to be copied in advance"
+msgstr ""
+"Globalni napredak prijenosa: radi samo s rsync verzijom 2.6.1 ili s novijom, "
+"i može prijaviti pogrešnu vrijednost ovisno o mogućnosti procjene rsync-a o "
+"broju datoteka koje treba unaprijed kopirati"
+
+#: ../grsync.glade.h:118
+msgid "Rsync output:"
+msgstr "rsync izlaz:"
+
+#: ../grsync.glade.h:119
+msgid "Click this button to show the error list"
+msgstr "Kliknite ovo dugme za prikaz popisa grešaka"
+
+#: ../grsync.glade.h:120
+msgid "Pause/resume rsync run"
+msgstr "Pauziraj/pokreni izvršenje rsync-a"
+
+#: ../grsync.glade.h:121
+msgid "Stops rsync and closes the window"
+msgstr "Zaustavlja rsync i zatvara prozor"
+
+#: ../grsync.glade.h:122
+msgid "About trailing slashes"
+msgstr "O posljednjim kosim crtama"
+
+#: ../grsync.glade.h:123
+msgid ""
+"A trailing slash on the source directory avoids creating an additional "
+"directory level at the destination.\n"
+"You can think of a trailing / on a source as meaning \"copy the contents of "
+"this directory\" as opposed to \"copy the directory itself and its contents"
+"\".\n"
+"\n"
+"In other words, each of the following commands copies the files in the same "
+"way:\n"
+"\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+msgstr ""
+"Posljednja kosa crta u izvornoj mapi onemogućuje stvaranje dodatne razine u "
+"odredišnoj mapi.\n"
+"O posljednjoj kosoj crti / u izvornoj mapi može se misliti kao \"kopiraj "
+"sadržaj ove mape\" nasuprot \"kopiraj mapu i njezin sadržaj\" .\n"
+"\n"
+"Drugim riječima, svaka od narednih naredbi kopira datoteke na jednak način:\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+
+#: ../src/main.c:49
+#, c-format
+msgid "Error: conflicting arguments\n"
+msgstr "Greška: konfliktni argumenti\n"
+
+#: ../src/callbacks.c:137
+#, c-format
+msgid "(ERROR) Can't open config file! Maybe this is the first run?\n"
+msgstr ""
+"(ERRORE) Ne mogu otvoriti konfiguracijsku datoteku! Možda je ovo prvo "
+"pokretanje?\n"
+
+#: ../src/callbacks.c:381 ../src/callbacks.c:1256
+#, c-format
+msgid "\tUnable to save settings!\n"
+msgstr "\tNe mogu spremiti postavke!\n"
+
+#: ../src/callbacks.c:474 ../src/callbacks.c:499 ../src/callbacks.c:1404
+#: ../src/callbacks.c:1429
+msgid "Browse"
+msgstr "Navigacija"
+
+#: ../src/callbacks.c:534
+#, c-format
+msgid "%.f%% (%li:%02li elapsed, %li:%02li remaining)"
+msgstr "%.f%% (%li:%02li proteklo, %li:%02li preostalo)"
+
+#: ../src/callbacks.c:684
+msgid "Simulation in progress"
+msgstr "Simulacija u progresu"
+
+#: ../src/callbacks.c:735
+msgid "The session you specified on the command line doesn't exists"
+msgstr "Sjednica koju ste specificirali u naredbenoj liniji ne postoji"
+
+#: ../src/callbacks.c:748
+msgid ""
+"Unable to execute the rsync command line tool. It is needed by this program. "
+"You may need to install the rsync package or make it available in the "
+"default executable search PATH. See file/preferences to change the default "
+"rsync executable command."
+msgstr ""
+"Ne mogu izvršiti naredbenu liniju alata rsync. On je potreban za ovaj "
+"program. Možda trebate instalirati rsync ili ga učiniti dostupnim u putanji "
+"izvršnih datoteka. Pogledati Datoteka/Postavke za početnu izvršnu naredbu "
+"rsync-a."
+
+#: ../src/callbacks.c:868
+msgid "** Launching AFTER command:\n"
+msgstr "** Pokretanje naredbe POSLIJE:\n"
+
+#: ../src/callbacks.c:883
+msgid "<span foreground=\"red\" weight=\"bold\">Completed with errors!</span>"
+msgstr "<span foreground=\"red\" weight=\"bold\">Završeno s greškama!</span>"
+
+#: ../src/callbacks.c:886
+msgid ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Completed successfully!</span>"
+msgstr ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Uspješno završeno!</span>"
+
+#: ../src/callbacks.c:1019
+msgid "Rsync process exit status: "
+msgstr "Status izlaza rsync procesa: "
+
+#: ../src/callbacks.c:1096
+msgid "** Launching BEFORE command:\n"
+msgstr "** Pokretanje naredbe PRIJE:\n"
+
+#: ../src/callbacks.c:1106
+msgid "** Launching RSYNC command (simulation mode):\n"
+msgstr "** Pokretanje naredbe RSYNC (simulacijski mod):\n"
+
+#: ../src/callbacks.c:1107
+msgid "** Launching RSYNC command:\n"
+msgstr "** Pokretanje naredbe RSYNC:\n"
+
+#: ../src/callbacks.c:1150
+msgid "Cannot execute rsync"
+msgstr "Ne mogu pokrenuti rsync"
+
+#: ../src/callbacks.c:1195
+msgid "This session name is reserved, you cannot call it like this"
+msgstr "Ime ove sjednice je već rezervirano, ne možete je tako nazvati"
+
+#: ../src/callbacks.c:1205
+msgid "A session named like this already exists"
+msgstr "Sjednica ovog imena već postoji"
+
+#: ../src/callbacks.c:1233
+msgid "You cannot delete the default session"
+msgstr "Ne možete obrisati početnu sjednicu"
+
+#: ../src/callbacks.c:1240
+#, c-format
+msgid "Are you sure you want to delete the '%s' session?"
+msgstr "Jeste li sigurni da želite obrisati sjednicu '%s'?"
+
+#: ../src/callbacks.c:1270
+msgid "Application icons by Roberto Gadotti <info@kuama.net>"
+msgstr "Ikone aplikacije Roberto Gadotti <info@kuama.net>"
+
+#: ../src/callbacks.c:1275
+msgid "Written by Piero Orsoni <orsoni@gmail.com>"
+msgstr "Napisao Piero Orsoni <orsoni@gmail.com>"
+
+#: ../src/callbacks.c:1276
+msgid "Additional bug-fixing by Luca Marturana <lucamarturana@gmail.com>"
+msgstr "Dodatne ispravke greški Luca Marturana <lucamarturana@gmail.com>"
+
+#: ../src/callbacks.c:1278
+msgid "Dutch translation by Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+msgstr "Nizozemski prievod Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+
+#: ../src/callbacks.c:1279
+msgid "Simplified Chinese translation by Xie Yanbo <xieyanbo@gmail.com>"
+msgstr "Pojednostavnjeni kineski prijevod Xie Yanbo <xieyanbo@gmail.com>"
+
+#: ../src/callbacks.c:1280
+msgid "French translation by xavier <ersplus@free.fr>"
+msgstr "Francuski prijedvod xavier <ersplus@free.fr>"
+
+#: ../src/callbacks.c:1281
+msgid "Swedish translation by Daniel Nylander <info@danielnylander.se>"
+msgstr "Švedski prijevod Daniel Nylander <info@danielnylander.se>"
+
+#: ../src/callbacks.c:1282
+msgid "Turkish translation by Doruk Fisek <dfisek@fisek.com.tr>"
+msgstr "Turski prijevod Doruk Fisek <dfisek@fisek.com.tr>"
+
+#: ../src/callbacks.c:1283
+msgid "Russian translation by Evgenii Terechkov <evg@altlinux.ru>"
+msgstr "Ruski prijevod Evgenii Terechkov <evg@altlinux.ru>"
+
+#: ../src/callbacks.c:1284
+msgid "German translation by Martin Lettner <m.lettner@gmail.com>"
+msgstr "Njemački prijevod Martin Lettner <m.lettner@gmail.com>"
+
+#: ../src/callbacks.c:1285
+msgid "Spanish translation by Ibon Castilla Varela <estri@euskalnet.net>"
+msgstr "Španjolski prijevod  Ibon Castilla Varela <estri@euskalnet.net>"
+
+#: ../src/callbacks.c:1286
+msgid "Czech translation by Martin Balajka <m.balajka@gmail.com>"
+msgstr "Češki prijevod Martin Balajka <m.balajka@gmail.com>"
+
+#: ../src/callbacks.c:1287
+msgid "Galician translation by Daniel Espinheira <daniel.espinheira@gmail.com>"
+msgstr "Galicijski prijevod Daniel Espinheira <daniel.espinheira@gmail.com>"
+
+#: ../src/callbacks.c:1288
+msgid "Catalan translation by Josep Sànchez <josep.sanchez@ubuntu.cat>"
+msgstr "Katalonski prijevod Josep Sànchez <josep.sanchez@ubuntu.cat>"
+
+#: ../src/callbacks.c:1289
+msgid ""
+"Brazilian Portuguese translation by Fábio Nogueira <deb-user-ba@ubuntu.com>"
+msgstr "Portugalski prijevod Fábio Nogueira <deb-user-ba@ubuntu.com>"
+
+#: ../src/callbacks.c:1290
+msgid "Indonesian translation by Waluyo Adi Siswanto <was.uthm@gmail.com>"
+msgstr "Indonezijski prijevod Waluyo Adi Siswanto <was.uthm@gmail.com>"
+
+#: ../src/callbacks.c:1291
+msgid "Croatian translation by Bojan Vondra <bojanvondra@hotmail.com>"
+msgstr "Hrvatski prijevod Bojan Vondra <bojanvondra@hotmail.com>"
+
+#: ../src/callbacks.c:1295
+msgid "Synchronize files and folders (a GTK GUI for rsync)."
+msgstr "Sinkornizacija datoteka i mapa (GTK GUI za rsync)"
+
+#: ../src/callbacks.c:1296
+msgid ""
+"(C) Piero Orsoni and others. Released under the GPL.\n"
+"See COPYING for details"
+msgstr ""
+"(C) Piero Orsoni i drugi. Objavljeno pod GPL.\n"
+"Pogledati datoteku COPYING za detalje"
+
+#: ../src/callbacks.c:1414
+msgid "Session imported"
+msgstr "Uvezena sjednica"
+
+#: ../src/callbacks.c:1440
+msgid "Session exported"
+msgstr "Izvezena sjednica"
+
+#~ msgid "Maemo compatibility by Luca Donaggio <donaggio@gmail.com>"
+#~ msgstr "Kompatibilnost s Maemo-m Luca Donaggio <donaggio@gmail.com>"
+
+#~ msgid "rsync: running"
+#~ msgstr "rsync: in funzione"
+
+#~ msgid "rsync: stopped"
+#~ msgstr "rsync: fermo"
+
+#~ msgid "rsync: paused"
+#~ msgstr "rsync: in pausa"
+
+#~ msgid ""
+#~ "<b>Source and Destination</b> <i>(directories need a trailing \"/\")</i>"
+#~ msgstr ""
+#~ "<b>Sorgente e Destinazione</b> <i>(cartelle necessitano '/' finale)</i>"
+
+#~ msgid "Error: missing filename\n"
+#~ msgstr "Errore: manca il nome file\n"
+
+#~ msgid "A GTK GUI for rsync"
+#~ msgstr "GUI GTK per rsync"
+
+#~ msgid "<b>Sessions</b>"
+#~ msgstr "<b>Sessioni</b>"

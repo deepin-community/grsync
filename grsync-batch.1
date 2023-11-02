@@ -1,0 +1,31 @@
+.TH GRSYNC\-BATCH 1 "2007\-07\-18" "0.6" "grsync batch runner"
+
+.SH NAME
+GRSYNC\-BATCH \- Grsync batch session runner
+
+.SH SYNOPSIS
+.B grsync\-batch [\-f] [\-d] [session_name|file_name]
+
+.SH DESCRIPTION
+.B GRSYNC\-BATCH
+is a script which can be used to automate rsync runs using grsync sessions (see man grsync).
+for example it can be put into crontab for scheduled execution on terminal, and to get
+the results via email.
+
+.SH OPTIONS
+.B GRSYNC\-BATCH
+by default loads the session you specify on the command line from your grsync.ini default
+configuration file. if you specify the \-f option, it will be treated as a file name to load
+instead. in this case, only one session can be present in the file so there is no need
+to specify the session.
+the \-d option makes a dry\-run, i.e. simulation (run but don't make any changes)
+
+.SH SEE ALSO
+.BR Website
+<http://www.opbyte.it/grsync/>,
+.BR grsync
+
+.SH AUTHOR
+GRSYNC was written by Piero Orsoni <info@opbyte.it>.
+.PP
+This manual page was written by Piero Orsoni

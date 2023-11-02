@@ -1,0 +1,340 @@
+Grsync Release history:
+
+Version 1.3.0
+	Gtk3 compatibility (some compile warnings left) (thanks Balló and Ganael)
+	Removed Maemo support, platform is obsolete
+	Added escaping of arguments containing spaces when printing rsync command line output
+	Updated Spanish translation (thanks Charles)
+
+Version 1.2.8
+	Fixed possible issue on log writing
+	Fixed "trailing slash" dialog disappearing forever when "close" title button clicked
+	Updated Russian translation (thanks Vadim)
+	Replaced "execute" icon with "media-play" icon to avoid confusion with "settings"
+	Fixed ALT-E keybinding conflict
+	Fixed session set execution by commandline only running first 2 sessions
+	Fixed execution by commandline not honoring "stay open" switch
+	Replaced deprecated calls using GTimeVal
+	Unity support defaults to disabled
+	Updated German translation (thanks Gerd)
+
+Version 1.2.7 (untagged)
+	Updated Swedish translation (thanks Påvel)
+	Added Greek translation (thanks Vangelis)
+	Added Portuguese translation (thanks Alberto)
+
+Version 1.2.6
+	Don't save "default" session to ini file when "remember last used session" is off
+	Better "before command" error notification
+	Added "overwrite logs" preferences option
+	Updated Norwegian translation (thanks Åka)
+	Updated Russian translation (thanks Alex)
+	Updated German translation (thanks Andre)
+	Updated Swedish translation (thanks Påvel)
+	Updated Simplified Chinese translation (thanks Tommy)
+	Enhanced and translated desktop file
+	Updated README file
+
+Version 1.2.5
+	Fixed an uninitialized variable warning
+	Fixed current session type change on new session creation
+	Fixed selection of sessions in set
+	Removed "switch source with destination" keyboard shortcut
+	Fixed pause and stop when running as superuser (it may ask the password multiple times)
+	Added Hungarian translation (thanks Gabor)
+	Updated French translation
+	Updated Czech translation (thanks Petr)
+
+Version 1.2.4
+	Monospace font in the rsync output box
+	Fix for compiling under newer versions of gcc (missing "-lm")
+	Log files are now appended (instead of truncated) each time a new run is done
+	Added date and time when starting a new rsync run (useful with logs)
+	Added Traditional Chinese translation (thanks Wei-Lun)
+
+Version 1.2.3
+	Do not allow creation of session names with slashes in them
+	Lintian fixes to man pages and desktop file (thanks Martijn)
+
+Version 1.2.2
+	Increased size of source and destination fields
+	Added Croatian translation (thanks Bojan)
+	Updated German translation (thanks Dennis)
+	Updated Brazilian Portuguese translation (thanks Fábio)
+
+Version 1.2.1
+	Enabled session sets (experimental, please report bugs)
+	Added Unity support (progress bar)
+	Fixed saving of current session when creating new one
+	Little fix to main window layout for the two "open" buttons, which had some overflown translations
+	Grsync-batch: fixed paths with spaces in them
+	Optimization of global and file progress updates
+	Fixed a translation problem on the "slashes" help dialog
+	Updated Dutch translation (thanks Frank)
+
+Version 1.2.0
+	Very experimental support for session sets: disabled (unless you reenable it into the glade file) because too buggy and I wanted to make a release
+	Fixed bug: didn't check "before command" exit status correctly
+	Fixed bug: some rsync window titles aren't translatable
+	Fixed bug: grsync-batch can't find last session in config file
+	Fixed bug: output text is not selectable after something initially fails
+	Added check for empty new session names
+	Differentiated exit status in grsync-batch
+	Some glade file cleanups "by-hand": unfortunately the file cannot be maintained by using glade, until a fixed version of it is released
+	Auto window resize only on first window load
+	Added Brazilian Portuguese translation (thanks Fábio)
+	Added Indonesian translation (thanks Waluyo)
+	Updated French translation (thanks Phillippe)
+	Updated Spanish translation (thanks Jorge)
+	Updated Russian translation (thanks Alex)
+
+Version 1.1.1
+	Removed automatic addition of a trailing slash to source and destination directories
+		WARNING: this changes the behavior from "copy contents of source dir" to "copy source dir and its contents",
+		affects only source dirs selected from file chooser dialog.
+		Also updated labels and "about trailing slash" dialog.
+	Updated new functionalities of 1.1.0 for Maemo, added configuration backup support + other fixes
+	Updated czech translation (thanks Lucas)
+	Fixed tags in a french translation message
+	Added "Rsync command line" menu item
+
+Version 1.1.0
+	"Use tray icon" preferences option added
+	Autogen.sh script upgraded
+	Modified Makefile.am to exclude subversion directories from the tar distribution file, other small fixes
+	Added --protect-args option, on by default, solves the "remote filename with spaces" problem
+	Fixed bug: doesn't save "itemized changes list" option
+	French translation updated (Thanks François)
+	Added mime type definition for grsync session files with icon
+	Updated desktop file to open session files with "grsync -i"
+	Made some fixes which could make grsync more stable on some systems
+	Added "run as superuser" extra options switch, uses "pkexec" from policykit
+	Added rsync child watch function
+	Added rsync process exit status output
+	Fixed behaviour when rsync window is closed not by using the close button
+	Added "contribute" menu item
+	Added workaround for freebsd and mac os X glib child watch problem
+	Fixed scrolling to end on pause
+
+Version 1.0.0
+	Maemo compatibility patch merged with upstream (thanks Luca)
+	Removed a gtk call added in version 0.9.3 which was the only one needing gtk >= 2.18
+	Added help dialog about the trailing slash on directories
+	Added -i option to import a session file from command line
+
+Version 0.9.3
+	Bug fixes:
+		Fixed file permissions: some scripts were not executable
+		Fixed grsync-batch to run on mac os x and other BSD derivated OSes
+		Fixed main window position and size reset when closed with window manager's close button
+	Enhancements:
+		Added advanced option to disable directory recursion
+		Added preferences option to enable the "switch source with destination" button
+		New main window layout, more compact and pretty; changes include:
+			new toolbar
+			removed quit button
+			introduced more stock buttons
+			removed custom icons from buttons
+			additional options in a multiline text entry field
+			directories moved to "basic options" tab
+			notes moved to "extra options" tab
+			other little fixes to tooltips, accelerators etc.
+		Authors information moved from AUTHORS file to about dialog
+	Locale:
+		German translation updated (thanks Martin)
+		Italian translation had a wrong charset definition
+
+Version 0.9.2
+	grsync-batch: added itemize-changes option which was missing in 0.9.1
+	Small fix to the pause button showing as "play" instead of "pause" in some occasions
+	Catalan translation added (thanks Josep)
+	"-s" command line option added, stays open on success
+	Gtkbuilder xml file updated for glade 3.6.7
+	Fixed bug: when wrong session specified on the command line with "-e", executes default session instead of nothing
+	Fixed bug: grsync can't start when compiled against gtk >= 2.16.6
+	Now prints an error and exits when unable to correctly load gtkbuilder xml file
+	Dutch translation updated (thanks Frank)
+	Italian translation updated
+	Manpage updated
+
+Version 0.9.1
+	General:
+		"itemize-changes" advanced rsync option added
+		some code cleanup
+	Rsync dialog:
+		added "warning" button which opens the error list
+		made "show error list when finished" preferences option default to false
+		fixed some small memory leaks
+		some cosmetic fixes
+	Main window:
+		focus on widgets didn't work before the window loosed focus
+
+Version 0.9.0
+	Converted from glade-2 with code generation to glade-3 with GtkBuilder
+	Some deprecated GTK calls have been removed, now grsync requires GTK 2.16
+	Due to the use of GtkBuilder and other optimizations and cleanups, many lines of code have been removed
+	Found an acceptable way to make rsync window resizable, despite the presence of an expander
+	Removed "switch source with destination" button (there is a menu item for the same purpose)
+	Added "fast rsync scrolling" preferences switch
+	Added extra option "on rsync error only" to limit the execution of the "after" command
+	Italian translation updated (the others will need some work because of the move to GtkBuilder)
+	"Notes" session field added
+	Error dialog is now marked ad "urgent"
+	New session dialog remembers last session name
+	System menu: moved from applications/network to applications/system
+	New bigger icon (Thanks Roberto)
+
+Version 0.6.3
+	Fixed regression bug "rsync output always open"
+	Fixed crash on import session
+	Made rsync output faster by scrolling to end of text box just every second instead of every line
+
+Version 0.6.2
+	Added Spanish translation (Thanks Ibon)
+	Added Czech translation (Thanks Martin)
+	Added Galician translation (Thanks Daniel)
+	Little patch to solve the infamous "save session bug" (Thanks Louis)
+
+Version 0.6.1
+	Fixed some bad bugs in grsync-batch:
+		Strings from the configuration or ini file where not quoted
+		Check for command to execute after rsync was broken
+		Look for /bin/bash shell script, not generic /bin/sh
+		Fixed "did not load last session in ini file"
+		Version number was outdated
+	Hard links preserve option added
+	Added option to stop before running rsync if the "pre" command fails
+	French translation updated (Thanks Ianaré)
+	When run with "-e" option, do not close the window automatically if there are errors (Thanks Nick)
+	Removed "incompatible implicit declaration of built-in function 'round'" compile warning
+	Little desktop file changes
+	German translation added (Thanks Oliver)
+
+Version 0.6
+	Added windows compatibility option: workaround for FAT 2-seconds time resolution
+	Added "--update" option
+	Remembers window size and position
+	Import and export session functions (save a single session to a file, insert it into your current set)
+	New "grsync-batch" shell script file, installed by default, used to execute rsync on a grsync session
+	Some documentation updates
+
+Version 0.5.2
+	Another patch by Luca Marturana for intltool and a couple of fixes in the italian translation
+
+Version 0.5.1
+	Intltool patch by Luca Marturana applied, should fix translation installation problems
+	Turkish translation added (Thanks Doruk)
+	Russian translation added (Thanks Evgenii)
+	Added checkbox to select files instead of folders on browse source and destination
+	Added "-e" commandline option to automatically execute the session and close grsync when finished
+
+Version 0.5
+	Rsync and error windows have been turned into dialogs, which are more appropriate
+	Transient parents have been correctly set, meaning no more focus or iconify problems
+	Added optional log file for sessions
+	Preferences and add session dialogs layout changed
+	Added optional "command to execute before" and "command to execute after" for each session
+	Scrolling of text view has been enhanced
+	Default values of preferences booleans are now working
+	Specifying a session on command line didn't work if "remember last used session" was checked
+	Tooltips have been enriched with text from "rsync --help"
+	Some optimizations for dryrun (simulation) mode
+	Some little enhancements to highlight if we are in simulation mode
+
+Version 0.4.3
+	Main window menu has been completed
+	Accelerators has been added
+	The interface has been enhanced and fixed in order to follow Gnome HIG guidelines,
+		including some label changes (dry-run -> simulation) (Thanks Jeff)
+	Another small fix in Makefile.am about DESTDIR
+	Fedora spec file included in tarball
+
+Version 0.4.2
+	Now prints the rsync command with options before rsync output
+	French translation updated again (what about updating the others too? ;-) )
+	Rsync output text is made selectable and copyable into clipboard at run end
+	Rsync run status is printed on rsync window title
+	Paused time is now subtracted from total time
+	Optionally (by configuration) show a window with all the errors encountered during the run when finished
+
+Version 0.4.1
+	Global progress with timings is added to main window title
+	Rsync window now iconifies together with the main window
+	Fixed a bug which prevented grsync from running if no config file is found (introduced in 0.4)
+
+Version 0.4
+	Cosmetics: percentages are shown on progress bars, elapsed and remaining time, "completed" messages are colored and bold.
+	Updated french translation
+	Automake files has been made more flexible (this comes from a patch to make the gentoo ebuild)
+	Fixed another small IO channels bug (did not set stderr channel to non-blocking)
+	Added menubar, no more need for about button
+	Added an error dialog when rsync cannot be run (before you could not tell if empty output or unable to run)
+	Added little preferences dialog:
+		Configurable rsync executable
+		Show rsync output by default
+		Remember last used session
+	Removed "trampoline object" warning (might have caused problems on some architectures)
+	Added "rsync info" dialog
+
+Version 0.3.2
+	Fixed a bug in IO channels causing some output not be printed at the end (introduced in 0.3.1)
+
+Version 0.3.1
+	Added pause button
+	Possibly fixed a race condition causing rsync output to block and use all cpu
+	More accurate progress parsing
+	Global progress parsing for rsync >= 2.6.7 added
+	Cleaner IO channel communication with rsync command line program
+
+Version 0.3
+	Fixed destination browse button, bug introduced in 0.2.2
+	Rsync output parsing:
+		Added current file progress meter
+		Added global progress meter (needs rsync >= 2.6.1 to work)
+		Added label showing current operation
+		Rsync output is now hidden, expand when needed, on dryrun by default
+	Updated french translation
+	Added button to switch source directory with destination
+	Session list now ordered by name
+
+Version 0.2.2
+	Added command line argument to load specific session instead of "default"
+	Added "additional options" text entry field
+	Added tooltips for most widgets
+
+Version 0.2.1
+	Cleaner compile (removed all warnings, mostly harmless)
+	Added swedish translation (thanks Daniel)
+	Added french translation (thanks Xavier)
+	Removed main window vertical scrollbar (sometimes displays bad)
+	Added duplicate session name check and dialog
+	Add session text box accepts enter as confirmation (just like pressing the OK button)
+	Now using standard GTK AboutBox instead of custom one
+
+Version 0.2
+	Added "advanced" tab with more rsync options
+	Added "session delete" confirmation dialog
+	Added "default session delete" error dialog
+	Added rsync executable check at startup
+	Added simplified chinese translation (thanks Xie)
+	Session name is now shown on title bar
+	Added "trailing slash on source directory" message
+	Verbose, progress and "preserve time" are now on by default
+	Added .desktop file
+	Fixed icon name and location
+	Added vertical scrollbar on main window (makes porting to maemo easier)
+	Added dummy manpage (thanks Daniel)
+	Some code cleanup
+
+Version 0.1.2
+	Updated icons (thanks Christophe)
+	Added dutch translation (thanks Wouter)
+	Added italian translation
+	Added about dialog
+	Some fixes to let all strings be translated
+
+Version 0.1.1
+	Added "session" support: remember multiple settings
+
+Version 0.1
+	First alpha release

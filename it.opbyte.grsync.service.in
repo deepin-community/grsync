@@ -1,0 +1,5 @@
+# Service description file
+[D-BUS Service]
+Name=it.opbyte.@PACKAGE@
+Exec=@prefix@/bin/@PACKAGE@
+

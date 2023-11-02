@@ -1,0 +1,831 @@
+# ITALIAN translation of grsync.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the grsync package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-23 15:21+0100\n"
+"PO-Revision-Date: 2010-07-01 16:39+0200\n"
+"Last-Translator: Piero Orsoni <info@opbyte.it>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../grsync.glade.h:1
+msgid "Grsync"
+msgstr "Grsync"
+
+#: ../grsync.glade.h:2
+msgid "_File"
+msgstr "_File"
+
+#: ../grsync.glade.h:3
+msgid "Browse S_ource"
+msgstr "Sfoglia S_orgente"
+
+#: ../grsync.glade.h:4
+msgid "Browse _Destination"
+msgstr "Sfoglia _Destinazione"
+
+#: ../grsync.glade.h:5
+msgid "Switch source with destination"
+msgstr "Scambia sorgente e destinazione"
+
+#: ../grsync.glade.h:6
+msgid "_Simulation"
+msgstr "_Simulazione"
+
+#: ../grsync.glade.h:7
+msgid "_Rsync command line"
+msgstr "Linea di comando _Rsync"
+
+#: ../grsync.glade.h:8
+msgid "Sess_ions"
+msgstr "Sess_ioni"
+
+#: ../grsync.glade.h:9
+msgid "_Import"
+msgstr "_Importa"
+
+#: ../grsync.glade.h:10
+msgid "_Export"
+msgstr "_Esporta"
+
+#: ../grsync.glade.h:11
+msgid "_Help"
+msgstr "_Aiuto"
+
+#: ../grsync.glade.h:12
+msgid "_Rsync info"
+msgstr "Info su _Rsync"
+
+#: ../grsync.glade.h:13
+msgid "_Contribute"
+msgstr "_Contribuisci"
+
+#: ../grsync.glade.h:14
+msgid "Click to add a new session"
+msgstr "Clicca per creare una nuova sessione"
+
+#: ../grsync.glade.h:15
+msgid "Click to delete the current session"
+msgstr "Clicca per cancellare la sessione corrente"
+
+#: ../grsync.glade.h:16
+msgid ""
+"Show what would have been done, but actually do nothing (\"dry-run\" in "
+"rsync language)"
+msgstr ""
+"Mostra cosa farebbe, ma senza far nulla (\"dry-run\" in linguaggio rsync)"
+
+#: ../grsync.glade.h:17
+msgid "_Simulate"
+msgstr "_Simula"
+
+#: ../grsync.glade.h:18
+msgid "Make a full run (go!)"
+msgstr "Esecuzione completa (vai!)"
+
+#: ../grsync.glade.h:19
+msgid "Preserve group"
+msgstr "Mantieni gruppo"
+
+#: ../grsync.glade.h:20
+msgid "Preserve time"
+msgstr "Mantieni data"
+
+#: ../grsync.glade.h:21
+msgid "Preserve permissions"
+msgstr "Mantieni permessi"
+
+#: ../grsync.glade.h:22
+msgid "Preserve owner"
+msgstr "Mantieni utente"
+
+#: ../grsync.glade.h:23
+msgid "Do not leave filesystem"
+msgstr "Non uscire dal filesystem"
+
+#: ../grsync.glade.h:24
+msgid "Do not cross filesystem boundaries"
+msgstr "Non uscire dal filesystem"
+
+#: ../grsync.glade.h:25
+msgid "Delete on destination"
+msgstr "Cancella nella destinazione"
+
+#: ../grsync.glade.h:26
+msgid "Delete files in destination which are not present in the source"
+msgstr "Cancella i file nella destinazione che non ci sono nella sorgente"
+
+#: ../grsync.glade.h:27
+msgid "Verbose"
+msgstr "Informazioni aggiuntive"
+
+#: ../grsync.glade.h:28
+msgid "Show more information"
+msgstr "Mostra piu' informazioni"
+
+#: ../grsync.glade.h:29
+msgid "Show transfer progress"
+msgstr "Mostra stato trasferimento"
+
+#: ../grsync.glade.h:30
+msgid "Ignore existing"
+msgstr "Ignora esistenti"
+
+#: ../grsync.glade.h:31
+msgid "Ignore files which already exist in the destination"
+msgstr "Ignora i file che esistono gia' nella destinazione"
+
+#: ../grsync.glade.h:32
+msgid "Size only"
+msgstr "Solo dimensione"
+
+#: ../grsync.glade.h:33
+msgid "Check size only, ignore time and checksum"
+msgstr "Confronta solo la dimensione, ignora la data e il checksum"
+
+#: ../grsync.glade.h:34
+msgid "Skip newer"
+msgstr "Salta nuovi"
+
+#: ../grsync.glade.h:35
+msgid "Do not update newer files"
+msgstr "Non aggiorna i file piu' nuovi sulla destinazione"
+
+#: ../grsync.glade.h:36
+msgid "Windows compatibility"
+msgstr "Compatibilita' con windows"
+
+#: ../grsync.glade.h:37
+msgid "Provides workaround for a windows FAT filesystem limitation"
+msgstr "Fornisce soluzione ad una limitazione del filesystem FAT di windows"
+
+#: ../grsync.glade.h:38
+msgid "Click to open the file browser"
+msgstr "Clicca per aprire il file browser"
+
+#: ../grsync.glade.h:39
+msgid "Source directory"
+msgstr "Directory sorgente"
+
+#: ../grsync.glade.h:40
+msgid "Destination directory"
+msgstr "Directory destinazione"
+
+#: ../grsync.glade.h:41
+msgid "Click here to switch the source with the destination directory"
+msgstr "Clicca per scambiare la sorgente con la destinazione"
+
+#: ../grsync.glade.h:42
+msgid "Source and Destination:"
+msgstr "Sorgente e Destinazione:"
+
+#: ../grsync.glade.h:43
+msgid "Basic options"
+msgstr "Opzioni di base"
+
+#: ../grsync.glade.h:44
+msgid "Always checksum"
+msgstr "Checksum sempre"
+
+#: ../grsync.glade.h:45
+msgid "Always compare file contents (by checksum)"
+msgstr "Confronta sempre il contenuto dei file (con checksum)"
+
+#: ../grsync.glade.h:46
+msgid "Preserve devices"
+msgstr "Mantieni device"
+
+#: ../grsync.glade.h:47
+msgid "Only update existing files"
+msgstr "Aggiorna solo file esistenti"
+
+#: ../grsync.glade.h:48
+msgid "Keep partially transferred files"
+msgstr "Tieni file parzialmente trasferiti"
+
+#: ../grsync.glade.h:49
+msgid "Don't map uid/gid values"
+msgstr "Non mappare valori uid/gid"
+
+#: ../grsync.glade.h:50
+msgid "Keep numeric uid/gid instead of mapping user names and group names"
+msgstr ""
+"Mantieni uid e gid numerici, non mappare i nomi degli utenti e dei gruppi"
+
+#: ../grsync.glade.h:51
+msgid "Additional options:"
+msgstr "Opzioni avanzate:"
+
+#: ../grsync.glade.h:52
+msgid "Compress file data"
+msgstr "Comprimi i dati"
+
+#: ../grsync.glade.h:53
+msgid ""
+"Compress file data when transferring (useful only if at least one side is "
+"remote)"
+msgstr ""
+"Comprimi i dati mentre trasferisci (utile solo se almeno una delle parti e' "
+"remota)"
+
+#: ../grsync.glade.h:54
+msgid "Copy symlinks as symlinks"
+msgstr "Copia symlink come tali"
+
+#: ../grsync.glade.h:55
+msgid "Symbolic links are copied as such, do not copy link target file"
+msgstr ""
+"I link simbolici vengono copiati come tali, non copiare il file puntato"
+
+#: ../grsync.glade.h:56
+msgid "Make backups"
+msgstr "Fai copie di backup"
+
+#: ../grsync.glade.h:57
+msgid "Make backups of existing files on the destination"
+msgstr "Fai copie di backup dei file gia' esistenti nella destinazione"
+
+#: ../grsync.glade.h:58
+msgid "Copy hardlinks as hardlinks"
+msgstr "Copia gli hardlink come tali"
+
+#: ../grsync.glade.h:59
+msgid "Hard links are copied as such, do not copy link target file"
+msgstr "Gli hard link vengono copiati come tali, non copiare il file puntato"
+
+#: ../grsync.glade.h:60
+msgid "Show itemized changes list"
+msgstr "Mostra lista cambiamenti"
+
+#: ../grsync.glade.h:61
+msgid "Show additional information on every changed file"
+msgstr "Mostra informazioni addizionali su tutti i file cambiati"
+
+#: ../grsync.glade.h:62
+msgid "Disable recursion"
+msgstr "Disabilita ricorsione"
+
+#: ../grsync.glade.h:63
+msgid "If checked the subdirectories of the source folder will be ignored"
+msgstr ""
+"Se selezionato le sottocartelle della cartella sorgente saranno ignorate"
+
+#: ../grsync.glade.h:64
+msgid "Additional command line options to pass to the rsync program"
+msgstr ""
+"Opzioni addizionali da passare alla riga di comando del programma rsync"
+
+#: ../grsync.glade.h:65
+msgid "Protect remote args"
+msgstr "Proteggi argomenti remoti"
+
+#: ../grsync.glade.h:66
+msgid ""
+"Protect remote arguments from shell expansion, Avoids the need to manually "
+"escape remote folders and other options which use file names like --exclude"
+msgstr ""
+"Proteggi gli argomenti remoti dall'espansione della shell: evita di dover "
+"proteggere manualmente le cartelle remote ed altre opzioni che utilizzano "
+"nomi di file come --exclude"
+
+#: ../grsync.glade.h:67
+msgid "Advanced options"
+msgstr "Opzioni avanzate"
+
+#: ../grsync.glade.h:68
+msgid "Execute this command before rsync:"
+msgstr "Esegui questo comando prima di rsync:"
+
+#: ../grsync.glade.h:69
+msgid ""
+"Click on this item if you want to run a command before syncing. Can be "
+"useful, for instance, to mount a filesystem before starting or to do some "
+"cleanup."
+msgstr ""
+"Clicca per eseguire un comando prima di rsync. Puo' essere utile, per "
+"esempio, per montare un'unita' prima di partire oppure fare della pulizia"
+
+#: ../grsync.glade.h:70
+msgid "Execute this command after rsync:"
+msgstr "Esegui questo comando dopo di rsync:"
+
+#: ../grsync.glade.h:71
+msgid ""
+"Click on this item if you want to run a command after syncing. Can be "
+"useful, for instance, to unmount a filesystem at the end or to do some "
+"cleanup."
+msgstr ""
+"Clicca per eseguire un comando dopo di rsync. Puo' essere utile, per "
+"esempio, per montare un'unita' prima di partire oppure fare della pulizia"
+
+#: ../grsync.glade.h:72
+msgid "Browse files instead of folders"
+msgstr "Scegli file anziche' cartelle"
+
+#: ../grsync.glade.h:73
+msgid ""
+"By setting this switch, the browse source and destination buttons will open "
+"a dialog for selecting files instead of folders"
+msgstr ""
+"Impostando questo parametro, i bottoni di scelta sorgente e destinazione "
+"apriranno una finestra di scelta file anziche' cartelle"
+
+#: ../grsync.glade.h:74
+msgid "Halt on failure"
+msgstr "Interrompi se fallisce"
+
+#: ../grsync.glade.h:75
+msgid ""
+"When running the \"before\" command, if it fails for some reason, don't run "
+"rsync and halt"
+msgstr ""
+"Quando viene lanciato il comando \"dopo\", se fallisce non lanciare la "
+"sincronizzazione ed interrompi"
+
+#: ../grsync.glade.h:76
+msgid "On rsync error only"
+msgstr "Solo in caso di errore rsync"
+
+#: ../grsync.glade.h:77
+msgid ""
+"Execute the \"after\" command only if syncronization had errors.\n"
+"For example can be used to send an email only in the case there was "
+"trouble.\n"
+"Try a command like \"mail -s 'rsync error' you@domain.com\"."
+msgstr ""
+"Esegui il comando \"dopo\" solo se la sincronizzazione ha avuto errori.\n"
+"Per esempio si puo' usare per mandare una email quando ci sono stati "
+"problemi.\n"
+"Prova un comando come \"mail -s 'errore rsync' you@domain.com\"."
+
+#: ../grsync.glade.h:80
+msgid "Notes:"
+msgstr "Note:"
+
+#: ../grsync.glade.h:81
+msgid "Free text notes on the current session"
+msgstr "Note testuali libere per la sessione corrente"
+
+#: ../grsync.glade.h:82
+msgid "Run as superuser"
+msgstr "Lancia come superutente"
+
+#: ../grsync.glade.h:83
+msgid ""
+"Run rsync with superuser (root, administrator) privileges. Use this if you "
+"need to access system files, for example when doing a full system backup."
+msgstr ""
+"Lancia rsync con permessi di superutente (root, amministratore). Usalo se "
+"hai bisogno di accedere a file di sistema, per esempio nel caso di backup "
+"dell'intero filesystem"
+
+#: ../grsync.glade.h:84
+msgid "Extra options"
+msgstr "Opzioni extra"
+
+#: ../grsync.glade.h:85
+msgid "Include these sessions:"
+msgstr "Includi queste sessioni:"
+
+#: ../grsync.glade.h:86
+msgid "Set options"
+msgstr "Opzioni gruppo"
+
+#: ../grsync.glade.h:87
+msgid "Add session"
+msgstr "Aggiungi sessione"
+
+#: ../grsync.glade.h:88
+msgid "Enter session name you want to create:"
+msgstr "Inserisci il nome della nuova sessione da creare:"
+
+#: ../grsync.glade.h:89
+msgid "Enter the name of the new session to create"
+msgstr "Inserisci il nome della nuova sessione da creare"
+
+#: ../grsync.glade.h:90
+msgid "Add as session set"
+msgstr "Aggiungi gruppo sessioni"
+
+#: ../grsync.glade.h:91
+msgid "Create a new session set instead of a normal session"
+msgstr "Crea un gruppo di sessioni invece di una sessione normale"
+
+#: ../grsync.glade.h:92
+msgid "Grsync preferences"
+msgstr "Preferenze Grsync"
+
+#: ../grsync.glade.h:93
+msgid "Show rsync output by default"
+msgstr "Mostra output rsync"
+
+#: ../grsync.glade.h:94
+msgid ""
+"Wether to show rsync output by default or hide it (show graphical "
+"information only)"
+msgstr ""
+"Indica se mostrare l'output di rsync o se nasconderlo (mostrando solo "
+"informazioni grafiche)"
+
+#: ../grsync.glade.h:95
+msgid "Remember last used session"
+msgstr "Ricorda l'ultima sessione usata"
+
+#: ../grsync.glade.h:96
+msgid "Whether to load the last used session at startup or use the default one"
+msgstr ""
+"Indica se caricare l'ultima sessione usata all'avvio o se usare quella di "
+"default"
+
+#: ../grsync.glade.h:97
+msgid "Show error list when finished"
+msgstr "Mostra lista errori alla fine"
+
+#: ../grsync.glade.h:98
+msgid ""
+"When rsync has finished, show all the errors encountered in a separate window"
+msgstr ""
+"Quando rsync ha finito, mostra tutti gli errori incontrati in una finestra "
+"separata"
+
+#: ../grsync.glade.h:99
+msgid "Enable logging"
+msgstr "Abilita il log (file di registro)"
+
+#: ../grsync.glade.h:100
+msgid ""
+"Whether to save rsync output to a log file, named like the session, which "
+"will be located in the grsync directory (usually \".grsync\" into your user "
+"home)"
+msgstr ""
+"Indica se registrare l'output di rsync in un file di log, con nome uguale "
+"alla sessione. Questo file si trovera' nella cartella di grsync (di solito "
+"\".grsync\" nella home dell'utente)"
+
+#: ../grsync.glade.h:101
+msgid "Enter the rsync command to use, eventually including its full path"
+msgstr ""
+"Inserisci il comando rsync da eseguire, eventualmente con percorso completo"
+
+#: ../grsync.glade.h:102
+msgid "Rsync executable:"
+msgstr "Eseguibile rsync:"
+
+#: ../grsync.glade.h:103
+msgid "Fast rsync output scrolling"
+msgstr "Scorrimento veloce testo di rsync"
+
+#: ../grsync.glade.h:104
+msgid ""
+"Select this if you want rsync output to scroll many lines at a time, in "
+"order to be faster"
+msgstr ""
+"Seleziona questa opzione se vuoi uno scorrimento veloce e multi linea di "
+"rsync"
+
+#: ../grsync.glade.h:105
+msgid "Enable switch button"
+msgstr "Abilita bottone scambia"
+
+#: ../grsync.glade.h:106
+msgid ""
+"Select this if you want an additional \"switch source with destination\" "
+"button in the basic options tab"
+msgstr ""
+"Seleziona se vuoi il tasto \"Scambia sorgente e destinazione\" nelle opzioni "
+"di base"
+
+#: ../grsync.glade.h:107
+msgid "Use tray icon"
+msgstr "Usa area di notifica"
+
+#: ../grsync.glade.h:108
+msgid ""
+"Check this box to show an icon of the application in the system tray instead "
+"of the application bar (may not work on Unity environments, like Ubuntu >= "
+"11.4)"
+msgstr ""
+"Seleziona questa casella per mostrare un'icona del programma nell'area di "
+"notifica invece che nella lista applicazioni (potrebbe non funzionare in "
+"ambiente Unity, come Ubuntu >= 11.4)"
+
+#: ../grsync.glade.h:109
+msgid "Overwrite logs"
+msgstr "Sovrascrivi i log"
+
+#: ../grsync.glade.h:110
+msgid ""
+"Whether to overwrite the logs when running a session. This will make you "
+"save space, but you'll loose the logs of the previous runs"
+msgstr ""
+"Attiva la sovrascrittura dei log (file di registro). Quando attivo, ogni "
+"volta che si lancia una sessione, il relativo log viene riscritto, con il "
+"vantaggio di risparmiare spazio su dico, ma perdendo il log delle sessioni "
+"precedenti"
+
+#: ../grsync.glade.h:111
+msgid "Errors list"
+msgstr "Lista errori"
+
+#: ../grsync.glade.h:112
+msgid "Error list of last rsync run:"
+msgstr "Lista errori dell'ultima esecuzione:"
+
+#: ../grsync.glade.h:113
+msgid "rsync"
+msgstr "rsync"
+
+#: ../grsync.glade.h:114
+msgid "Idle"
+msgstr "Attesa"
+
+#: ../grsync.glade.h:115
+msgid "Transfer progress of current file"
+msgstr "Stato trasferimento del file corrente"
+
+#: ../grsync.glade.h:116
+msgid "Global progress"
+msgstr "Stato globale"
+
+#: ../grsync.glade.h:117
+msgid ""
+"Global transfer progress: works only with rsync version 2.6.1 or newer, and "
+"may report wrong values depending on the ability of rsync to estimate the "
+"files to be copied in advance"
+msgstr ""
+"Stato globale del trasferimento: funziona solo con rsync versione 2.6.1 e "
+"successivi, e puo' mostrare valori sbagliati a seconda della capacita' di "
+"rsync di stimare i file da copiare in anticipo"
+
+#: ../grsync.glade.h:118
+msgid "Rsync output:"
+msgstr "Risultato di rsync:"
+
+#: ../grsync.glade.h:119
+msgid "Click this button to show the error list"
+msgstr "Clicca qui per vedere la lista degli errori"
+
+#: ../grsync.glade.h:120
+msgid "Pause/resume rsync run"
+msgstr "Metti in pausa/riparti"
+
+#: ../grsync.glade.h:121
+msgid "Stops rsync and closes the window"
+msgstr "Interrompe rsync e chiude la finestra"
+
+#: ../grsync.glade.h:122
+msgid "About trailing slashes"
+msgstr "Circa le barre finali"
+
+#: ../grsync.glade.h:123
+msgid ""
+"A trailing slash on the source directory avoids creating an additional "
+"directory level at the destination.\n"
+"You can think of a trailing / on a source as meaning \"copy the contents of "
+"this directory\" as opposed to \"copy the directory itself and its contents"
+"\".\n"
+"\n"
+"In other words, each of the following commands copies the files in the same "
+"way:\n"
+"\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+msgstr ""
+"Una barra finale nella cartella sorgente evita di creare un livello "
+"addizionale nella destinazione.\n"
+"Puoi immaginare la barra finale sulla sorgente come \"copia il contenuto di "
+"questa cartella\" al posto di \"copia la cartella stessa ed il suo contenuto"
+"\"\n"
+"\n"
+"In altre parole, ognuno dei seguenti comandi copiano i file nella stessa "
+"maniera:\n"
+"\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+
+#: ../src/main.c:49
+#, c-format
+msgid "Error: conflicting arguments\n"
+msgstr "Errore: parametri incompatibili\n"
+
+#: ../src/callbacks.c:137
+#, c-format
+msgid "(ERROR) Can't open config file! Maybe this is the first run?\n"
+msgstr ""
+"(ERRORE) Impossibile aprire il file di configurazione! Forse e' la prima "
+"esecuzione?\n"
+
+#: ../src/callbacks.c:381 ../src/callbacks.c:1256
+#, c-format
+msgid "\tUnable to save settings!\n"
+msgstr "\tImpossibile salvare le impostazioni!\n"
+
+#: ../src/callbacks.c:474 ../src/callbacks.c:499 ../src/callbacks.c:1404
+#: ../src/callbacks.c:1429
+msgid "Browse"
+msgstr "Sfoglia"
+
+#: ../src/callbacks.c:534
+#, c-format
+msgid "%.f%% (%li:%02li elapsed, %li:%02li remaining)"
+msgstr "%.f%% (%li:%02li passati, %li:%02li rimanenti)"
+
+#: ../src/callbacks.c:684
+msgid "Simulation in progress"
+msgstr "Simulazione in corso"
+
+#: ../src/callbacks.c:735
+msgid "The session you specified on the command line doesn't exists"
+msgstr "La sessione che hai specificato da riga di comando non esiste"
+
+#: ../src/callbacks.c:748
+msgid ""
+"Unable to execute the rsync command line tool. It is needed by this program. "
+"You may need to install the rsync package or make it available in the "
+"default executable search PATH. See file/preferences to change the default "
+"rsync executable command."
+msgstr ""
+"Non riesco ad eseguire il comando rsync. E' necessario per questo programma. "
+"Potrebbe servire installare il pacchetto rsync o renderlo eseguibile nel "
+"PATH (percorso) predefinito per i programmi. Vedi file/preferenze per "
+"cambiare il comando rsync da usare"
+
+#: ../src/callbacks.c:868
+msgid "** Launching AFTER command:\n"
+msgstr "** Avvio del comando PRIMA:\n"
+
+#: ../src/callbacks.c:883
+msgid "<span foreground=\"red\" weight=\"bold\">Completed with errors!</span>"
+msgstr "<span foreground=\"red\" weight=\"bold\">Completato con errori!</span>"
+
+#: ../src/callbacks.c:886
+msgid ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Completed successfully!</span>"
+msgstr ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Completato con successo!</"
+"span>"
+
+#: ../src/callbacks.c:1019
+msgid "Rsync process exit status: "
+msgstr "Stato di uscita del processo rsync: "
+
+#: ../src/callbacks.c:1096
+msgid "** Launching BEFORE command:\n"
+msgstr "** Avvio del comando DOPO:\n"
+
+#: ../src/callbacks.c:1106
+msgid "** Launching RSYNC command (simulation mode):\n"
+msgstr "** Avvio del comando RSYNC (modalita' simulazione):\n"
+
+#: ../src/callbacks.c:1107
+msgid "** Launching RSYNC command:\n"
+msgstr "** Avvio del comando RSYNC:\n"
+
+#: ../src/callbacks.c:1150
+msgid "Cannot execute rsync"
+msgstr "Impossibile eseguire rsync"
+
+#: ../src/callbacks.c:1195
+msgid "This session name is reserved, you cannot call it like this"
+msgstr "Questo nome di sessione e' riservato, non lo si puo' usare"
+
+#: ../src/callbacks.c:1205
+msgid "A session named like this already exists"
+msgstr "Esiste gia' una sessione con questo nome"
+
+#: ../src/callbacks.c:1233
+msgid "You cannot delete the default session"
+msgstr "Non puoi cancellare la sessione di default"
+
+#: ../src/callbacks.c:1240
+#, c-format
+msgid "Are you sure you want to delete the '%s' session?"
+msgstr "Sei sicuro di voler cancellare la sessione '%s'?"
+
+#: ../src/callbacks.c:1270
+msgid "Application icons by Roberto Gadotti <info@kuama.net>"
+msgstr "Icona applicazione di Roberto Gadotti <info@kuama.net>"
+
+#: ../src/callbacks.c:1275
+msgid "Written by Piero Orsoni <orsoni@gmail.com>"
+msgstr "Scritto da Piero Orsoni <orsoni@gmail.com>"
+
+#: ../src/callbacks.c:1276
+msgid "Additional bug-fixing by Luca Marturana <lucamarturana@gmail.com>"
+msgstr ""
+"Correzione errori aggiuntiva di Luca Marturana <lucamarturana@gmail.com>"
+
+#: ../src/callbacks.c:1278
+msgid "Dutch translation by Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+msgstr "Traduzione in Olandese di Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+
+#: ../src/callbacks.c:1279
+msgid "Simplified Chinese translation by Xie Yanbo <xieyanbo@gmail.com>"
+msgstr "Traduzione in Cinese semplificato di Xie Yanbo <xieyanbo@gmail.com>"
+
+#: ../src/callbacks.c:1280
+msgid "French translation by xavier <ersplus@free.fr>"
+msgstr "Traduzione in Francese di xavier <ersplus@free.fr>"
+
+#: ../src/callbacks.c:1281
+msgid "Swedish translation by Daniel Nylander <info@danielnylander.se>"
+msgstr "Traduzione in Svedese di Daniel Nylander <info@danielnylander.se>"
+
+#: ../src/callbacks.c:1282
+msgid "Turkish translation by Doruk Fisek <dfisek@fisek.com.tr>"
+msgstr "Traduzione in Turco di Doruk Fisek <dfisek@fisek.com.tr>"
+
+#: ../src/callbacks.c:1283
+msgid "Russian translation by Evgenii Terechkov <evg@altlinux.ru>"
+msgstr "Traduzione in Russo di Evgenii Terechkov <evg@altlinux.ru>"
+
+#: ../src/callbacks.c:1284
+msgid "German translation by Martin Lettner <m.lettner@gmail.com>"
+msgstr "Traduzione in Tedesco di Martin Lettner <m.lettner@gmail.com>"
+
+#: ../src/callbacks.c:1285
+msgid "Spanish translation by Ibon Castilla Varela <estri@euskalnet.net>"
+msgstr "Traduzione in Spagnolo di Ibon Castilla Varela <estri@euskalnet.net>"
+
+#: ../src/callbacks.c:1286
+msgid "Czech translation by Martin Balajka <m.balajka@gmail.com>"
+msgstr "Traduzione in Ceco di Martin Balajka <m.balajka@gmail.com>"
+
+#: ../src/callbacks.c:1287
+msgid "Galician translation by Daniel Espinheira <daniel.espinheira@gmail.com>"
+msgstr ""
+"Traduzione in Galiziano di Daniel Espinheira <daniel.espinheira@gmail.com>"
+
+#: ../src/callbacks.c:1288
+msgid "Catalan translation by Josep Sànchez <josep.sanchez@ubuntu.cat>"
+msgstr "Traduzione in Catalano di Josep Sànchez <josep.sanchez@ubuntu.cat>"
+
+#: ../src/callbacks.c:1289
+msgid ""
+"Brazilian Portuguese translation by Fábio Nogueira <deb-user-ba@ubuntu.com>"
+msgstr ""
+"Traduzione in Portoghese Brasiliano di Fábio Nogueira <deb-user-ba@ubuntu."
+"com>"
+
+#: ../src/callbacks.c:1290
+msgid "Indonesian translation by Waluyo Adi Siswanto <was.uthm@gmail.com>"
+msgstr "Traduzione in Indonesiano di Waluyo Adi Siswanto <was.uthm@gmail.com>"
+
+#: ../src/callbacks.c:1291
+msgid "Croatian translation by Bojan Vondra <bojanvondra@hotmail.com>"
+msgstr "Traduzione in Croato di Bojan Vondra <bojanvondra@hotmail.com>"
+
+#: ../src/callbacks.c:1295
+msgid "Synchronize files and folders (a GTK GUI for rsync)."
+msgstr "Sincronizza file e cartelle (una GUI GTK di rsync)."
+
+#: ../src/callbacks.c:1296
+msgid ""
+"(C) Piero Orsoni and others. Released under the GPL.\n"
+"See COPYING for details"
+msgstr ""
+"(C) Piero Orsoni ed altri. Distribuito con GPL.\n"
+"Leggi COPYING per dettagli"
+
+#: ../src/callbacks.c:1414
+msgid "Session imported"
+msgstr "Sessione importata"
+
+#: ../src/callbacks.c:1440
+msgid "Session exported"
+msgstr "Sessione esportata"
+
+#~ msgid "Maemo compatibility by Luca Donaggio <donaggio@gmail.com>"
+#~ msgstr "Compatibilita' con Maemo di Luca Donaggio <donaggio@gmail.com>"
+
+#~ msgid "rsync: running"
+#~ msgstr "rsync: in funzione"
+
+#~ msgid "rsync: stopped"
+#~ msgstr "rsync: fermo"
+
+#~ msgid "rsync: paused"
+#~ msgstr "rsync: in pausa"
+
+#~ msgid ""
+#~ "<b>Source and Destination</b> <i>(directories need a trailing \"/\")</i>"
+#~ msgstr ""
+#~ "<b>Sorgente e Destinazione</b> <i>(cartelle necessitano '/' finale)</i>"
+
+#~ msgid "Error: missing filename\n"
+#~ msgstr "Errore: manca il nome file\n"
+
+#~ msgid "A GTK GUI for rsync"
+#~ msgstr "GUI GTK per rsync"
+
+#~ msgid "<b>Sessions</b>"
+#~ msgstr "<b>Sessioni</b>"

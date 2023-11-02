@@ -1,4 +1,31 @@
 #!/usr/bin/make -f
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+SHELL := sh -e
 
 %:
-	dh $@
+	dh ${@}
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	rm -f config.guess config.sub
+
+override_dh_auto_configure:
+	cp -f /usr/share/misc/config.guess config.guess
+	cp -f /usr/share/misc/config.sub config.sub
+
+	dh_auto_configure -- --disable-unity
+
+override_dh_auto_install:
+	dh_auto_install
+
+	for LOCALE in debian/grsync/usr/share/locale/*; \
+	do \
+		mv $$LOCALE `echo $$LOCALE | sed -e 's|_.*||'`; \
+	done
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS

@@ -1,0 +1,6 @@
+# List of source files containing translatable strings.
+
+[type: gettext/glade]grsync.glade
+src/main.c
+src/callbacks.c
+

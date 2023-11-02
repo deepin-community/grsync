@@ -1,0 +1,96 @@
+#!/bin/bash
+
+while [ "`echo $1 | head -c 1`" == "-" ]; do
+	if [ "$1" == "-d" ]; then
+		DRYRUN=true
+		shift
+		continue
+	fi
+	if [ "$1" == "-f" ]; then
+		FROMFILE=true
+		shift
+		continue
+	fi
+	echo "Unknown option"
+	exit 1
+done
+
+SESSION=$1
+if [ "$SESSION" == "" ]; then
+	echo "Grsync batch session runner ver 1.2.1"
+	echo "Comes under the GPL v2 - Copyright 2007->2012 Piero Orsoni (orsoni@gmail.com)"
+	echo "This script is part of the grsync program, see www.opbyte.it for more information"
+	echo
+	echo "Usage: grsync-batch [-d] [-f] <session (or filename for -f)>"
+	echo " -d	dry-run, simulate, do not really execute"
+	echo " -f	read session from filename instead of the default configuration file"
+	exit 2
+fi
+
+if [ "$FROMFILE" == "" ]; then
+	# SESSCONF=`echo "\`cat ~/.grsync/grsync.ini\`\[" | grep -A999 "\[$SESSION\]" | tail -n +2 | grep -m 1 -B999 "\[" | head -n -2`
+	SESSCONF=`echo -e "\`cat ~/.grsync/grsync.ini\`\n\n\[" | grep -A999 "\[$SESSION\]" | tail -n +2 | grep -m 1 -B999 "^$"`
+	if [ "$SESSCONF" == "" ]; then
+		echo "Session not found in config file"
+		exit 3
+	fi
+else
+	SESSCONF=`cat $SESSION | grep -A999 "\[" | tail -n +2`
+	if [ "$SESSCONF" == "" ]; then
+		echo "File not found or empty"
+		exit 4
+	fi
+fi
+
+
+# CONFIG=`cat ~/.grsync/grsync.ini | grep -A999 "\[__CONFIG\]" | tail -n +2 | grep -m 1 -B999 "\[" | head -n -2`
+CONFIG=`cat ~/.grsync/grsync.ini | grep -A999 "\[__CONFIG\]" | tail -n +2 | grep -m 1 -B999 "^$"`
+eval `echo -e "$SESSCONF\n$CONFIG" | sed s/=/=\"/ | sed s/\$/\"/`
+
+if [ "$is_set" == "true" ]; then
+	echo "Session sets not yet supported"
+	exit 5
+fi
+
+OPTIONS="$text_addit"
+if [ "$check_norecur" == "true" ]; then OPTIONS="-d $OPTIONS"; else OPTIONS="-r $OPTIONS"; fi
+if [ "$DRYRUN" == "true" ]; then OPTIONS="-n $OPTIONS"; fi
+if [ "$check_time" == "true" ]; then OPTIONS="-t $OPTIONS"; fi
+if [ "$check_perm" == "true" ]; then OPTIONS="-p $OPTIONS"; fi
+if [ "$check_owner" == "true" ]; then OPTIONS="-o $OPTIONS"; fi
+if [ "$check_group" == "true" ]; then OPTIONS="-g $OPTIONS"; fi
+if [ "$check_onefs" == "true" ]; then OPTIONS="-x $OPTIONS"; fi
+if [ "$check_verbose" == "true" ]; then OPTIONS="-v $OPTIONS"; fi
+if [ "$check_progr" == "true" ]; then OPTIONS="--progress $OPTIONS"; fi
+if [ "$check_delete" == "true" ]; then OPTIONS="--delete $OPTIONS"; fi
+if [ "$check_exist" == "true" ]; then OPTIONS="--ignore-existing $OPTIONS"; fi
+if [ "$check_size" == "true" ]; then OPTIONS="--size-only $OPTIONS"; fi
+if [ "$check_sum" == "true" ]; then OPTIONS="-c $OPTIONS"; fi
+if [ "$check_symlink" == "true" ]; then OPTIONS="-l $OPTIONS"; fi
+if [ "$check_hardlink" == "true" ]; then OPTIONS="-H $OPTIONS"; fi
+if [ "$check_dev" == "true" ]; then OPTIONS="-D $OPTIONS"; fi
+if [ "$check_update" == "true" ]; then OPTIONS="--existing $OPTIONS"; fi
+if [ "$check_keepart" == "true" ]; then OPTIONS="-P $OPTIONS"; fi
+if [ "$check_mapuser" == "true" ]; then OPTIONS="--numeric-ids $OPTIONS"; fi
+if [ "$check_compr" == "true" ]; then OPTIONS="-z $OPTIONS"; fi
+if [ "$check_backup" == "true" ]; then OPTIONS="-b $OPTIONS"; fi
+if [ "$check_skipnew" == "true" ]; then OPTIONS="-u $OPTIONS"; fi
+if [ "$check_windows" == "true" ]; then OPTIONS="--modify-window=1 $OPTIONS"; fi
+if [ "$check_itemized" == "true" ]; then OPTIONS="-i $OPTIONS"; fi
+if [ "$check_protectargs" == "true" ]; then OPTIONS="-s $OPTIONS"; fi
+
+if [ "$check_com_before" == "true" ]; then
+	echo "*** Executing $text_com_before"
+	$text_com_before
+	echo
+fi
+
+COMMAND="$command $OPTIONS "
+echo "*** Executing $COMMAND\"$text_source\" \"$text_dest\""
+$COMMAND "$text_source" "$text_dest"
+
+if [ "$check_com_after" == "true" ]; then
+	echo
+	echo "*** Executing $text_com_after"
+	$text_com_after
+fi

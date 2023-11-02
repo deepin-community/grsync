@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mime-info @MIMEINFO_XMLNS@>
+	<mime-type type="application/x-grsync-session">
+		<!-- <sub-class-of type="text/plain"/> -->
+		<comment>Grsync session</comment>
+		<comment xml:lang="it">Sessione di Grsync</comment>
+		@MIME_OSSOCAT@
+		<glob pattern="*.grsync"/>
+	</mime-type>
+</mime-info>

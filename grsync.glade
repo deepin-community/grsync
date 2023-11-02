@@ -1,0 +1,1984 @@
+<?xml version="1.0"?>
+<interface>
+	<requires lib="gtk+" version="2.16"/>
+	<!-- interface-naming-policy toplevel-contextual -->
+	<object class="GtkListStore" id="liststore_session">
+		<columns>
+			<!-- column-name session -->
+			<column type="gchararray"/>
+			<!-- column-name toggle -->
+			<column type="gboolean"/>
+			<!-- column-name not_is_set -->
+			<column type="gboolean"/>
+		</columns>
+	</object>
+	<object class="GtkTreeModelFilter" id="treemodelfilter_set">
+		<property name="child_model">liststore_session</property>
+	</object>
+	<object class="GtkWindow" id="main_window">
+		<property name="visible">True</property>
+		<property name="title" translatable="yes">Grsync</property>
+		<signal name="destroy" handler="on_main_destroy"/>
+		<signal name="configure_event" handler="on_main_configure_event"/>
+		<signal name="window_state_event" handler="on_main_window_window_state_event"/>
+		<child>
+			<object class="GtkVBox" id="vbox7">
+				<property name="visible">True</property>
+				<child>
+					<object class="GtkMenuBar" id="menubar1">
+						<property name="visible">True</property>
+						<child>
+							<object class="GtkMenuItem" id="menuitem1">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">_File</property>
+								<property name="use_underline">True</property>
+								<child type="submenu">
+									<object class="GtkMenu" id="menuitem1_menu">
+										<child>
+											<object class="GtkMenuItem" id="browse_source">
+												<property name="label" translatable="yes">Browse S_ource</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<accelerator key="s" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+												<signal name="activate" handler="show_browse_source"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="browse_destination">
+												<property name="label" translatable="yes">Browse _Destination</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<accelerator key="d" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+												<signal name="activate" handler="show_browse_dest"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="switch_source_with_destination1">
+												<property name="label" translatable="yes">Switch source with destination</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<!--<accelerator key="w" signal="activate" modifiers="GDK_CONTROL_MASK"/>-->
+												<signal name="activate" handler="on_button_switch_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkSeparatorMenuItem" id="separator2">
+												<property name="visible">True</property>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="simulation">
+												<property name="label" translatable="yes">_Simulation</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<accelerator key="s" signal="activate" modifiers="GDK_MOD1_MASK"/>
+												<signal name="activate" handler="on_dryrun_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkImageMenuItem" id="execute">
+												<property name="label">gtk-execute</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<accelerator key="e" signal="activate" modifiers="GDK_MOD1_MASK"/>
+												<signal name="activate" handler="on_play_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="commandline">
+												<property name="visible">True</property>
+												<property name="label" translatable="yes">_Rsync command line</property>
+												<property name="use_underline">True</property>
+												<accelerator key="r" signal="activate" modifiers="GDK_MOD1_MASK"/>
+												<signal name="activate" handler="on_commandline_activate"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkImageMenuItem" id="preferences1">
+												<property name="label">gtk-preferences</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<signal name="activate" handler="on_preferences1_activate"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkSeparatorMenuItem" id="separator1">
+												<property name="visible">True</property>
+											</object>
+										</child>
+										<child>
+											<object class="GtkImageMenuItem" id="quit1">
+												<property name="label">gtk-quit</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<accelerator key="q" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+												<signal name="activate" handler="on_main_destroy"/>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+						<child>
+							<object class="GtkMenuItem" id="menuitem3">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Sess_ions</property>
+								<property name="use_underline">True</property>
+								<child type="submenu">
+									<object class="GtkMenu" id="menuitem3_menu">
+										<child>
+											<object class="GtkImageMenuItem" id="add1">
+												<property name="label">gtk-add</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<accelerator key="a" signal="activate" modifiers="GDK_MOD1_MASK"/>
+												<signal name="activate" handler="on_session_add_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkImageMenuItem" id="delete1">
+												<property name="label">gtk-delete</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<accelerator key="d" signal="activate" modifiers="GDK_MOD1_MASK"/>
+												<signal name="activate" handler="on_session_del_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="import1">
+												<property name="label" translatable="yes">_Import</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<signal name="activate" handler="on_import1_activate"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="export1">
+												<property name="label" translatable="yes">_Export</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<signal name="activate" handler="on_export1_activate"/>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+						<child>
+							<object class="GtkMenuItem" id="menuitem4">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">_Help</property>
+								<property name="use_underline">True</property>
+								<child type="submenu">
+									<object class="GtkMenu" id="menuitem4_menu">
+										<child>
+											<object class="GtkImageMenuItem" id="about1">
+												<property name="label">gtk-about</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<property name="use_stock">True</property>
+												<signal name="activate" handler="on_button_about_clicked"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="rsync_info">
+												<property name="label" translatable="yes">_Rsync info</property>
+												<property name="visible">True</property>
+												<property name="use_underline">True</property>
+												<signal name="activate" handler="on_rsync_info_activate"/>
+											</object>
+										</child>
+										<child>
+											<object class="GtkMenuItem" id="contribute">
+												<property name="visible">True</property>
+												<property name="label" translatable="yes">_Contribute</property>
+												<property name="use_underline">True</property>
+												<signal name="activate" handler="on_contribute_activate"/>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="fill">False</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+				<child>
+					<object class="GtkToolbar" id="toolbar1">
+						<property name="visible">True</property>
+						<property name="show_arrow">False</property>
+						<child>
+							<object class="GtkToolItem" id="toolbutton1">
+								<property name="visible">True</property>
+								<child>
+									<object class="GtkTable" id="table6">
+										<property name="visible">True</property>
+										<child>
+											<object class="GtkComboBox" id="combo_session">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="model">liststore_session</property>
+												<property name="button_sensitivity">on</property>
+												<signal name="changed" handler="on_combo_session_changed"/>
+												<child>
+													<object class="GtkCellRendererText" id="text"/>
+													<attributes>
+														<attribute name="text">0</attribute>
+														<attribute name="style">2</attribute>
+													</attributes>
+												</child>
+											</object>
+											<packing>
+												<property name="y_options">GTK_EXPAND</property>
+											</packing>
+										</child>
+									</object>
+								</child>
+							</object>
+							<packing>
+								<property name="expand">True</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkToolButton" id="button_session_add">
+								<property name="visible">True</property>
+								<property name="tooltip_text" translatable="yes">Click to add a new session</property>
+								<property name="use_underline">True</property>
+								<property name="stock_id">gtk-add</property>
+								<signal name="clicked" handler="on_session_add_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkToolButton" id="button_session_delete">
+								<property name="visible">True</property>
+								<property name="tooltip_text" translatable="yes">Click to delete the current session</property>
+								<property name="use_underline">True</property>
+								<property name="stock_id">gtk-delete</property>
+								<signal name="clicked" handler="on_session_del_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkSeparatorToolItem" id="toolbutton2">
+								<property name="visible">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkToolButton" id="button_simulation">
+								<property name="visible">True</property>
+								<property name="tooltip_text" translatable="yes">Show what would have been done, but actually do nothing ("dry-run" in rsync language)</property>
+								<property name="label" translatable="yes">_Simulate</property>
+								<property name="use_underline">True</property>
+								<property name="stock_id">gtk-info</property>
+								<signal name="clicked" handler="on_dryrun_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkToolButton" id="button_execute">
+								<property name="visible">True</property>
+								<property name="tooltip_text" translatable="yes">Make a full run (go!)</property>
+								<property name="use_underline">True</property>
+								<property name="stock_id">gtk-media-play</property>
+								<signal name="clicked" handler="on_play_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="homogeneous">True</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child>
+					<object class="GtkNotebook" id="notebook1">
+						<property name="visible">True</property>
+						<property name="can_focus">True</property>
+						<property name="border_width">4</property>
+						<child>
+							<object class="GtkTable" id="table_basic">
+								<property name="visible">True</property>
+								<property name="border_width">5</property>
+								<property name="n_rows">9</property>
+								<property name="n_columns">2</property>
+								<property name="column_spacing">6</property>
+								<property name="row_spacing">6</property>
+								<child>
+									<object class="GtkCheckButton" id="check_group">
+										<property name="label" translatable="yes">Preserve group</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">2</property>
+										<property name="bottom_attach">3</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_time">
+										<property name="label" translatable="yes">Preserve time</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="active">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_perm">
+										<property name="label" translatable="yes">Preserve permissions</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_owner">
+										<property name="label" translatable="yes">Preserve owner</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">2</property>
+										<property name="bottom_attach">3</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_onefs">
+										<property name="label" translatable="yes">Do not leave filesystem</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Do not cross filesystem boundaries</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">4</property>
+										<property name="bottom_attach">5</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_delete">
+										<property name="label" translatable="yes">Delete on destination</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Delete files in destination which are not present in the source</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">4</property>
+										<property name="bottom_attach">5</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_verbose">
+										<property name="label" translatable="yes">Verbose</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Show more information</property>
+										<property name="use_underline">True</property>
+										<property name="active">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">5</property>
+										<property name="bottom_attach">6</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_progr">
+										<property name="label" translatable="yes">Show transfer progress</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="active">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">5</property>
+										<property name="bottom_attach">6</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_exist">
+										<property name="label" translatable="yes">Ignore existing</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Ignore files which already exist in the destination</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">6</property>
+										<property name="bottom_attach">7</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_size">
+										<property name="label" translatable="yes">Size only</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Check size only, ignore time and checksum</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">6</property>
+										<property name="bottom_attach">7</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkHSeparator" id="hseparator2">
+										<property name="height_request">10</property>
+										<property name="visible">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">3</property>
+										<property name="bottom_attach">4</property>
+										<property name="y_options">GTK_FILL</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_skipnew">
+										<property name="label" translatable="yes">Skip newer</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Do not update newer files</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">7</property>
+										<property name="bottom_attach">8</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_windows">
+										<property name="label" translatable="yes">Windows compatibility</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Provides workaround for a windows FAT filesystem limitation</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">7</property>
+										<property name="bottom_attach">8</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkFrame" id="frame2">
+										<property name="visible">True</property>
+										<property name="label_xalign">0</property>
+										<property name="shadow_type">none</property>
+										<child>
+											<object class="GtkAlignment" id="alignment6">
+												<property name="visible">True</property>
+												<child>
+													<object class="GtkHBox" id="hbox15">
+														<property name="visible">True</property>
+														<property name="border_width">6</property>
+														<property name="spacing">6</property>
+														<child>
+															<object class="GtkTable" id="table3">
+																<property name="visible">True</property>
+																<property name="n_rows">2</property>
+																<property name="n_columns">2</property>
+																<property name="column_spacing">6</property>
+																<property name="row_spacing">6</property>
+																<child>
+																	<object class="GtkButton" id="button_browse_source">
+																		<property name="label">gtk-open</property>
+																		<!--<property name="width_request">70</property>-->
+																		<property name="visible">True</property>
+																		<property name="can_focus">True</property>
+																		<property name="receives_default">True</property>
+																		<property name="tooltip_text" translatable="yes">Click to open the file browser</property>
+																		<property name="use_stock">True</property>
+																		<signal name="clicked" handler="show_browse_source"/>
+																	</object>
+																	<packing>
+																		<property name="left_attach">1</property>
+																		<property name="right_attach">2</property>
+																		<property name="x_options">GTK_FILL</property>
+																		<property name="y_options"></property>
+																	</packing>
+																</child>
+																<child>
+																	<object class="GtkButton" id="button_browse_dest">
+																		<property name="label">gtk-open</property>
+																		<!--<property name="width_request">70</property>-->
+																		<property name="visible">True</property>
+																		<property name="can_focus">True</property>
+																		<property name="receives_default">True</property>
+																		<property name="tooltip_text" translatable="yes">Click to open the file browser</property>
+																		<property name="use_stock">True</property>
+																		<signal name="clicked" handler="show_browse_dest"/>
+																	</object>
+																	<packing>
+																		<property name="left_attach">1</property>
+																		<property name="right_attach">2</property>
+																		<property name="top_attach">1</property>
+																		<property name="bottom_attach">2</property>
+																		<property name="x_options">GTK_FILL</property>
+																		<property name="y_options"></property>
+																	</packing>
+																</child>
+																<child>
+																	<object class="GtkEntry" id="text_source">
+																		<property name="visible">True</property>
+																		<property name="can_focus">True</property>
+																		<property name="tooltip_text" translatable="yes">Source directory</property>
+																		<property name="max_length">500</property>
+																		<property name="invisible_char">&#x25CF;</property>
+																	</object>
+																	<packing>
+																		<property name="y_options"></property>
+																	</packing>
+																</child>
+																<child>
+																	<object class="GtkEntry" id="text_dest">
+																		<property name="visible">True</property>
+																		<property name="can_focus">True</property>
+																		<property name="tooltip_text" translatable="yes">Destination directory</property>
+																		<property name="max_length">500</property>
+																		<property name="invisible_char">&#x25CF;</property>
+																	</object>
+																	<packing>
+																		<property name="top_attach">1</property>
+																		<property name="bottom_attach">2</property>
+																		<property name="y_options"></property>
+																	</packing>
+																</child>
+															</object>
+															<packing>
+																<property name="position">0</property>
+															</packing>
+														</child>
+														<child>
+															<object class="GtkButton" id="button_switch">
+																<property name="can_focus">True</property>
+																<property name="receives_default">True</property>
+																<property name="no_show_all">True</property>
+																<property name="tooltip_text" translatable="yes">Click here to switch the source with the destination directory</property>
+																<signal name="clicked" handler="on_button_switch_clicked"/>
+																<child>
+																	<object class="GtkImage" id="image8">
+																		<property name="visible">True</property>
+																		<property name="stock">gtk-refresh</property>
+																	</object>
+																</child>
+															</object>
+															<packing>
+																<property name="expand">False</property>
+																<property name="position">1</property>
+															</packing>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+										<child type="label">
+											<object class="GtkHBox" id="hbox1">
+												<property name="visible">True</property>
+												<child>
+													<object class="GtkLabel" id="label23">
+														<property name="visible">True</property>
+														<property name="label" translatable="yes">Source and Destination:</property>
+														<attributes>
+															<attribute name="weight" value="bold"/>
+														</attributes>
+													</object>
+													<packing>
+														<property name="position">0</property>
+													</packing>
+												</child>
+												<child>
+													<object class="GtkButton" id="button_trailing">
+														<property name="visible">True</property>
+														<property name="can_focus">True</property>
+														<property name="receives_default">True</property>
+														<property name="relief">none</property>
+														<signal name="clicked" handler="gtk_widget_show" object="dialog_trailing" after="yes"/>
+														<child>
+															<object class="GtkImage" id="image11">
+																<property name="visible">True</property>
+																<property name="stock">gtk-dialog-question</property>
+															</object>
+														</child>
+													</object>
+													<packing>
+														<property name="position">1</property>
+													</packing>
+												</child>
+											</object>
+										</child>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="y_options">GTK_FILL</property>
+									</packing>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+							</object>
+						</child>
+						<child type="tab">
+							<object class="GtkLabel" id="Basic">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Basic options</property>
+							</object>
+							<packing>
+								<property name="tab_fill">False</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkTable" id="table_advanced">
+								<property name="visible">True</property>
+								<property name="border_width">5</property>
+								<property name="n_rows">9</property>
+								<property name="n_columns">2</property>
+								<property name="column_spacing">6</property>
+								<property name="row_spacing">6</property>
+								<child>
+									<object class="GtkCheckButton" id="check_sum">
+										<property name="label" translatable="yes">Always checksum</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Always compare file contents (by checksum)</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_dev">
+										<property name="label" translatable="yes">Preserve devices</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_update">
+										<property name="label" translatable="yes">Only update existing files</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_keepart">
+										<property name="label" translatable="yes">Keep partially transferred files</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">2</property>
+										<property name="bottom_attach">3</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_mapuser">
+										<property name="label" translatable="yes">Don't map uid/gid values</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Keep numeric uid/gid instead of mapping user names and group names</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">2</property>
+										<property name="bottom_attach">3</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkLabel" id="label17">
+										<property name="visible">True</property>
+										<property name="xalign">0</property>
+										<property name="label" translatable="yes">Additional options:</property>
+										<attributes>
+											<attribute name="weight" value="bold"/>
+										</attributes>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">6</property>
+										<property name="bottom_attach">7</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_compr">
+										<property name="label" translatable="yes">Compress file data</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Compress file data when transferring (useful only if at least one side is remote)</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_symlink">
+										<property name="label" translatable="yes">Copy symlinks as symlinks</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Symbolic links are copied as such, do not copy link target file</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">3</property>
+										<property name="bottom_attach">4</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_backup">
+										<property name="label" translatable="yes">Make backups</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Make backups of existing files on the destination</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">4</property>
+										<property name="bottom_attach">5</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_hardlink">
+										<property name="label" translatable="yes">Copy hardlinks as hardlinks</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Hard links are copied as such, do not copy link target file</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">3</property>
+										<property name="bottom_attach">4</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_itemized">
+										<property name="label" translatable="yes">Show itemized changes list</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Show additional information on every changed file</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">4</property>
+										<property name="bottom_attach">5</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_norecur">
+										<property name="label" translatable="yes">Disable recursion</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">If checked the subdirectories of the source folder will be ignored</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">5</property>
+										<property name="bottom_attach">6</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkScrolledWindow" id="scrolledwindow1">
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="tooltip_text" translatable="yes">Additional command line options to pass to the rsync program</property>
+										<property name="hscrollbar_policy">never</property>
+										<property name="shadow_type">in</property>
+										<child>
+											<object class="GtkTextView" id="textview_additional">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="wrap_mode">word</property>
+											</object>
+										</child>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">7</property>
+										<property name="bottom_attach">8</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_protectargs">
+										<property name="label" translatable="yes">Protect remote args</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Protect remote arguments from shell expansion, Avoids the need to manually escape remote folders and other options which use file names like --exclude</property>
+										<property name="use_underline">True</property>
+										<property name="active">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">5</property>
+										<property name="bottom_attach">6</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+							</object>
+							<packing>
+								<property name="position">1</property>
+							</packing>
+						</child>
+						<child type="tab">
+							<object class="GtkLabel" id="Advanced">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Advanced options</property>
+							</object>
+							<packing>
+								<property name="position">1</property>
+								<property name="tab_fill">False</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkTable" id="table_extra">
+								<property name="visible">True</property>
+								<property name="border_width">5</property>
+								<property name="n_rows">12</property>
+								<property name="n_columns">2</property>
+								<property name="column_spacing">6</property>
+								<property name="row_spacing">6</property>
+								<child>
+									<object class="GtkCheckButton" id="check_com_before">
+										<property name="label" translatable="yes">Execute this command before rsync:</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Click on this item if you want to run a command before syncing. Can be useful, for instance, to mount a filesystem before starting or to do some cleanup.</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkEntry" id="entry_com_before">
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="max_length">200</property>
+										<property name="invisible_char">&#x25CF;</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_com_after">
+										<property name="label" translatable="yes">Execute this command after rsync:</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Click on this item if you want to run a command after syncing. Can be useful, for instance, to unmount a filesystem at the end or to do some cleanup.</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">4</property>
+										<property name="bottom_attach">5</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkEntry" id="entry_com_after">
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="max_length">200</property>
+										<property name="invisible_char">&#x25CF;</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">5</property>
+										<property name="bottom_attach">6</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_browse_files">
+										<property name="label" translatable="yes">Browse files instead of folders</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">By setting this switch, the browse source and destination buttons will open a dialog for selecting files instead of folders</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="top_attach">8</property>
+										<property name="bottom_attach">9</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_com_halt">
+										<property name="label" translatable="yes">Halt on failure</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">When running the "before" command, if it fails for some reason, don't run rsync and halt</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">2</property>
+										<property name="bottom_attach">3</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkHSeparator" id="hseparator5">
+										<property name="visible">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">3</property>
+										<property name="bottom_attach">4</property>
+										<property name="x_options">GTK_FILL</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkHSeparator" id="hseparator6">
+										<property name="visible">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">7</property>
+										<property name="bottom_attach">8</property>
+										<property name="x_options">GTK_FILL</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_com_onerror">
+										<property name="label" translatable="yes">On rsync error only</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Execute the "after" command only if syncronization had errors.
+For example can be used to send an email only in the case there was trouble.
+Try a command like "mail -s 'rsync error' you@domain.com".</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">6</property>
+										<property name="bottom_attach">7</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkLabel" id="Notes">
+										<property name="visible">True</property>
+										<property name="xalign">0</property>
+										<property name="label" translatable="yes">Notes:</property>
+										<attributes>
+											<attribute name="weight" value="bold"/>
+										</attributes>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">9</property>
+										<property name="bottom_attach">10</property>
+										<property name="x_options">GTK_FILL</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkEntry" id="entry_notes">
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="tooltip_text" translatable="yes">Free text notes on the current session</property>
+										<property name="invisible_char">&#x25CF;</property>
+									</object>
+									<packing>
+										<property name="right_attach">2</property>
+										<property name="top_attach">10</property>
+										<property name="bottom_attach">11</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkCheckButton" id="check_superuser">
+										<property name="label" translatable="yes">Run as superuser</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="receives_default">False</property>
+										<property name="tooltip_text" translatable="yes">Run rsync with superuser (root, administrator) privileges. Use this if you need to access system files, for example when doing a full system backup.</property>
+										<property name="use_underline">True</property>
+										<property name="draw_indicator">True</property>
+									</object>
+									<packing>
+										<property name="left_attach">1</property>
+										<property name="right_attach">2</property>
+										<property name="top_attach">8</property>
+										<property name="bottom_attach">9</property>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options"></property>
+									</packing>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+								<child>
+									<placeholder/>
+								</child>
+							</object>
+							<packing>
+								<property name="position">2</property>
+							</packing>
+						</child>
+						<child type="tab">
+							<object class="GtkLabel" id="label28">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Extra options</property>
+							</object>
+							<packing>
+								<property name="position">2</property>
+								<property name="tab_fill">False</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkTable" id="table_set">
+								<property name="visible">True</property>
+								<property name="n_rows">2</property>
+								<child>
+									<object class="GtkScrolledWindow" id="scrolledwindow2">
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="hscrollbar_policy">automatic</property>
+										<property name="vscrollbar_policy">automatic</property>
+										<child>
+											<object class="GtkTreeView" id="treeview_set">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="model">treemodelfilter_set</property>
+												<property name="headers_visible">False</property>
+												<property name="headers_clickable">False</property>
+												<property name="search_column">0</property>
+												<child>
+													<object class="GtkTreeViewColumn" id="treeviewcolumn1">
+														<child>
+															<object class="GtkCellRendererToggle" id="cellrenderertoggle1">
+																<signal name="toggled" handler="on_cellrenderertoggle1_toggled"/>
+															</object>
+															<attributes>
+																<attribute name="active">1</attribute>
+															</attributes>
+														</child>
+													</object>
+												</child>
+												<child>
+													<object class="GtkTreeViewColumn" id="treeviewcolumn2">
+														<property name="title">Session</property>
+														<child>
+															<object class="GtkCellRendererText" id="cellrenderertext1"/>
+															<attributes>
+																<attribute name="text">0</attribute>
+															</attributes>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+									</object>
+									<packing>
+										<property name="top_attach">1</property>
+										<property name="bottom_attach">2</property>
+									</packing>
+								</child>
+								<child>
+									<object class="GtkLabel" id="label30">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">Include these sessions:</property>
+										<attributes>
+											<attribute name="weight" value="bold"/>
+										</attributes>
+									</object>
+									<packing>
+										<property name="x_options">GTK_FILL</property>
+										<property name="y_options">GTK_FILL</property>
+										<property name="y_padding">5</property>
+									</packing>
+								</child>
+							</object>
+							<packing>
+								<property name="position">3</property>
+							</packing>
+						</child>
+						<child type="tab">
+							<object class="GtkLabel" id="label29">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Set options</property>
+							</object>
+							<packing>
+								<property name="position">3</property>
+								<property name="tab_fill">False</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="position">2</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+	</object>
+	<object class="GtkDialog" id="dialog_new_session">
+		<property name="border_width">12</property>
+		<property name="title" translatable="yes">Add session</property>
+		<property name="resizable">False</property>
+		<property name="modal">True</property>
+		<property name="type_hint">dialog</property>
+		<property name="skip_taskbar_hint">True</property>
+		<property name="skip_pager_hint">True</property>
+		<property name="transient_for">main_window</property>
+		<child internal-child="vbox">
+			<object class="GtkVBox" id="dialog-vbox1">
+				<property name="visible">True</property>
+				<property name="spacing">12</property>
+				<child>
+					<object class="GtkLabel" id="label27">
+						<property name="visible">True</property>
+						<property name="label" translatable="yes">Enter session name you want to create:</property>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="fill">False</property>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child>
+					<object class="GtkEntry" id="entry_session_name">
+						<property name="width_request">200</property>
+						<property name="visible">True</property>
+						<property name="can_focus">True</property>
+						<property name="tooltip_text" translatable="yes">Enter the name of the new session to create</property>
+						<property name="max_length">50</property>
+						<property name="activates_default">True</property>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="fill">False</property>
+						<property name="position">2</property>
+					</packing>
+				</child>
+				<child>
+					<object class="GtkCheckButton" id="checkbutton_isset">
+						<property name="label" translatable="yes">Add as session set</property>
+						<property name="visible">True</property>
+						<property name="can_focus">True</property>
+						<property name="receives_default">False</property>
+						<property name="tooltip_text" translatable="yes">Create a new session set instead of a normal session</property>
+						<property name="draw_indicator">True</property>
+					</object>
+					<packing>
+						<property name="position">3</property>
+					</packing>
+				</child>
+				<child internal-child="action_area">
+					<object class="GtkHButtonBox" id="dialog-action_area1">
+						<property name="visible">True</property>
+						<property name="layout_style">end</property>
+						<child>
+							<object class="GtkButton" id="cancelbutton1">
+								<property name="label">gtk-cancel</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="can_default">True</property>
+								<property name="receives_default">False</property>
+								<property name="use_stock">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkButton" id="okbutton1">
+								<property name="label">gtk-ok</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="can_default">True</property>
+								<property name="has_default">True</property>
+								<property name="receives_default">False</property>
+								<property name="use_stock">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">1</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="pack_type">end</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+		<action-widgets>
+			<action-widget response="-6">cancelbutton1</action-widget>
+			<action-widget response="-5">okbutton1</action-widget>
+		</action-widgets>
+	</object>
+	<object class="GtkDialog" id="dialog_config">
+		<property name="border_width">12</property>
+		<property name="title" translatable="yes">Grsync preferences</property>
+		<property name="modal">True</property>
+		<property name="type_hint">dialog</property>
+		<property name="skip_taskbar_hint">True</property>
+		<property name="skip_pager_hint">True</property>
+		<property name="transient_for">main_window</property>
+		<child internal-child="vbox">
+			<object class="GtkVBox" id="dialog-vbox2">
+				<property name="visible">True</property>
+				<property name="spacing">12</property>
+				<child>
+					<object class="GtkTable" id="table4">
+						<property name="visible">True</property>
+						<property name="n_rows">6</property>
+						<property name="n_columns">2</property>
+						<property name="column_spacing">12</property>
+						<property name="row_spacing">6</property>
+						<child>
+							<object class="GtkCheckButton" id="check_output">
+								<property name="label" translatable="yes">Show rsync output by default</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Wether to show rsync output by default or hide it (show graphical information only)</property>
+								<property name="use_underline">True</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="top_attach">2</property>
+								<property name="bottom_attach">3</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_remember">
+								<property name="label" translatable="yes">Remember last used session</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Whether to load the last used session at startup or use the default one</property>
+								<property name="use_underline">True</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="left_attach">1</property>
+								<property name="right_attach">2</property>
+								<property name="top_attach">2</property>
+								<property name="bottom_attach">3</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_errorlist">
+								<property name="label" translatable="yes">Show error list when finished</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">When rsync has finished, show all the errors encountered in a separate window</property>
+								<property name="use_underline">True</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="top_attach">3</property>
+								<property name="bottom_attach">4</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_log">
+								<property name="label" translatable="yes">Enable logging</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Whether to save rsync output to a log file, named like the session, which will be located in the grsync directory (usually ".grsync" into your user home)</property>
+								<property name="use_underline">True</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="left_attach">1</property>
+								<property name="right_attach">2</property>
+								<property name="top_attach">3</property>
+								<property name="bottom_attach">4</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkEntry" id="entry_command">
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="tooltip_text" translatable="yes">Enter the rsync command to use, eventually including its full path</property>
+								<property name="max_length">200</property>
+								<property name="activates_default">True</property>
+							</object>
+							<packing>
+								<property name="right_attach">2</property>
+								<property name="top_attach">1</property>
+								<property name="bottom_attach">2</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkLabel" id="label20">
+								<property name="visible">True</property>
+								<property name="xalign">0</property>
+								<property name="yalign">0</property>
+								<property name="label" translatable="yes">Rsync executable:</property>
+							</object>
+							<packing>
+								<property name="right_attach">2</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_fastscroll">
+								<property name="label" translatable="yes">Fast rsync output scrolling</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Select this if you want rsync output to scroll many lines at a time, in order to be faster</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="top_attach">4</property>
+								<property name="bottom_attach">5</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_switchbutton">
+								<property name="label" translatable="yes">Enable switch button</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Select this if you want an additional "switch source with destination" button in the basic options tab</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="left_attach">1</property>
+								<property name="right_attach">2</property>
+								<property name="top_attach">4</property>
+								<property name="bottom_attach">5</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_trayicon">
+								<property name="label" translatable="yes">Use tray icon</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Check this box to show an icon of the application in the system tray instead of the application bar (may not work on Unity environments, like Ubuntu >= 11.4)</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="top_attach">5</property>
+								<property name="bottom_attach">6</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkCheckButton" id="check_log_overwrite">
+								<property name="label" translatable="yes">Overwrite logs</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Whether to overwrite the logs when running a session. This will make you save space, but you'll loose the logs of the previous runs</property>
+								<property name="use_underline">True</property>
+								<property name="draw_indicator">True</property>
+							</object>
+							<packing>
+								<property name="left_attach">1</property>
+								<property name="right_attach">2</property>
+								<property name="top_attach">5</property>
+								<property name="bottom_attach">6</property>
+								<property name="x_options">GTK_FILL</property>
+								<property name="y_options"></property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child internal-child="action_area">
+					<object class="GtkHButtonBox" id="dialog-action_area2">
+						<property name="visible">True</property>
+						<property name="layout_style">end</property>
+						<child>
+							<object class="GtkButton" id="cancelbutton2">
+								<property name="label">gtk-cancel</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="can_default">True</property>
+								<property name="receives_default">False</property>
+								<property name="use_stock">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkButton" id="okbutton2">
+								<property name="label">gtk-ok</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="can_default">True</property>
+								<property name="has_default">True</property>
+								<property name="receives_default">False</property>
+								<property name="use_stock">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">1</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="pack_type">end</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+		<action-widgets>
+			<action-widget response="-6">cancelbutton2</action-widget>
+			<action-widget response="-5">okbutton2</action-widget>
+		</action-widgets>
+	</object>
+	<object class="GtkDialog" id="dialog_errors">
+		<property name="title" translatable="yes">Errors list</property>
+		<property name="modal">True</property>
+		<property name="type_hint">dialog</property>
+		<property name="skip_taskbar_hint">True</property>
+		<property name="skip_pager_hint">True</property>
+		<property name="urgency_hint">True</property>
+		<property name="transient_for">dialog_rsync</property>
+		<child internal-child="vbox">
+			<object class="GtkVBox" id="dialog-vbox3">
+				<property name="visible">True</property>
+				<child>
+					<object class="GtkVBox" id="vbox10">
+						<property name="visible">True</property>
+						<property name="border_width">12</property>
+						<property name="spacing">12</property>
+						<child>
+							<object class="GtkLabel" id="label1">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">Error list of last rsync run:</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkScrolledWindow" id="scrolledwindow4">
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="shadow_type">in</property>
+								<property name="propagate-natural-height">True</property>
+								<property name="propagate-natural-width">True</property>
+								<child>
+									<object class="GtkTextView" id="textview_errors">
+										<property name="width_request">400</property>
+										<property name="height_request">150</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="editable">False</property>
+									</object>
+								</child>
+							</object>
+							<packing>
+								<property name="position">1</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child internal-child="action_area">
+					<object class="GtkHButtonBox" id="dialog-action_area3">
+						<property name="visible">True</property>
+						<property name="layout_style">end</property>
+						<child>
+							<object class="GtkButton" id="closebutton1">
+								<property name="label">gtk-close</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="can_default">True</property>
+								<property name="receives_default">False</property>
+								<property name="use_stock">True</property>
+								<signal name="clicked" handler="gtk_widget_hide" object="dialog_errors"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="pack_type">end</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+		<action-widgets>
+			<action-widget response="-7">closebutton1</action-widget>
+		</action-widgets>
+	</object>
+	<object class="GtkDialog" id="dialog_rsync">
+		<property name="border_width">12</property>
+		<property name="title" translatable="yes">rsync</property>
+		<property name="modal">True</property>
+		<property name="type_hint">dialog</property>
+		<property name="skip_taskbar_hint">True</property>
+		<property name="skip_pager_hint">True</property>
+		<property name="transient_for">main_window</property>
+		<signal name="hide" handler="on_rsync_hide"/>
+		<signal name="show" handler="on_rsync_show"/>
+		<signal name="delete_event" handler="gtk_widget_hide_on_delete"/>
+		<child internal-child="vbox">
+			<object class="GtkVBox" id="dialog-vbox4">
+				<property name="visible">True</property>
+				<child>
+					<object class="GtkVBox" id="vbox11">
+						<property name="visible">True</property>
+						<property name="spacing">6</property>
+						<child>
+							<object class="GtkLabel" id="label_file">
+								<property name="visible">True</property>
+								<property name="xalign">0</property>
+								<property name="yalign">0</property>
+								<property name="label" translatable="yes">Idle</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkProgressBar" id="progress_file">
+								<property name="visible">True</property>
+								<property name="events">GDK_ENTER_NOTIFY_MASK | GDK_LEAVE_NOTIFY_MASK</property>
+								<property name="tooltip_text" translatable="yes">Transfer progress of current file</property>
+								<property name="pulse_step">0.10000000149</property>
+								<property name="text">0%</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="padding">3</property>
+								<property name="position">1</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkLabel" id="label_global">
+								<property name="visible">True</property>
+								<property name="xalign">0</property>
+								<property name="yalign">0</property>
+								<property name="label" translatable="yes">Global progress</property>
+								<property name="wrap">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">2</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkProgressBar" id="progress_global">
+								<property name="visible">True</property>
+								<property name="events">GDK_ENTER_NOTIFY_MASK | GDK_LEAVE_NOTIFY_MASK</property>
+								<property name="tooltip_text" translatable="yes">Global transfer progress: works only with rsync version 2.6.1 or newer, and may report wrong values depending on the ability of rsync to estimate the files to be copied in advance</property>
+								<property name="pulse_step">0.10000000149</property>
+								<property name="text">0%</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">3</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkHSeparator" id="hseparator4">
+								<property name="width_request">410</property>
+								<property name="visible">True</property>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="position">4</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkExpander" id="expander_rsync">
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<signal name="activate" handler="on_expander_rsync_activate" after="yes"/>
+								<child>
+									<object class="GtkScrolledWindow" id="scrolledwindow5">
+										<property name="height_request">250</property>
+										<property name="visible">True</property>
+										<property name="can_focus">True</property>
+										<property name="hscrollbar_policy">automatic</property>
+										<property name="vscrollbar_policy">automatic</property>
+										<property name="shadow_type">in</property>
+										<child>
+											<object class="GtkTextView" id="textview_output">
+												<property name="visible">True</property>
+												<property name="sensitive">False</property>
+												<property name="can_focus">True</property>
+												<property name="editable">False</property>
+												<property name="cursor_visible">False</property>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child type="label">
+									<object class="GtkLabel" id="label26">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">Rsync output:</property>
+									</object>
+								</child>
+							</object>
+							<packing>
+								<property name="position">5</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child internal-child="action_area">
+					<object class="GtkHButtonBox" id="dialog-action_area4">
+						<property name="visible">True</property>
+						<property name="layout_style">end</property>
+						<child>
+							<object class="GtkButton" id="button_show_errors">
+								<property name="label">gtk-dialog-warning</property>
+								<property name="visible">True</property>
+								<property name="sensitive">False</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">True</property>
+								<property name="tooltip_text" translatable="yes">Click this button to show the error list</property>
+								<property name="use_stock">True</property>
+								<signal name="clicked" handler="on_button_show_errors_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkButton" id="button_pause">
+								<property name="label">gtk-media-pause</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Pause/resume rsync run</property>
+								<property name="use_stock">True</property>
+								<signal name="clicked" handler="on_button_pause_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">1</property>
+							</packing>
+						</child>
+						<child>
+							<object class="GtkButton" id="close">
+								<property name="label">gtk-stop</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">False</property>
+								<property name="tooltip_text" translatable="yes">Stops rsync and closes the window</property>
+								<property name="use_stock">True</property>
+								<signal name="clicked" handler="on_close_clicked"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">2</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="pack_type">end</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+		<action-widgets>
+			<action-widget response="0">button_show_errors</action-widget>
+			<action-widget response="0">button_pause</action-widget>
+			<action-widget response="0">close</action-widget>
+		</action-widgets>
+	</object>
+	<object class="GtkDialog" id="dialog_trailing">
+		<property name="border_width">10</property>
+		<property name="title" translatable="yes">About trailing slashes</property>
+		<property name="resizable">False</property>
+		<property name="modal">True</property>
+		<property name="window_position">center-on-parent</property>
+		<property name="destroy_with_parent">True</property>
+		<property name="type_hint">dialog</property>
+		<property name="skip_taskbar_hint">True</property>
+		<property name="skip_pager_hint">True</property>
+		<property name="transient_for">main_window</property>
+		<signal name="delete_event" handler="gtk_widget_hide_on_delete"/>
+		<child internal-child="vbox">
+			<object class="GtkVBox" id="dialog-vbox5">
+				<property name="visible">True</property>
+				<property name="spacing">2</property>
+				<child>
+					<object class="GtkLabel" id="label_trailing">
+						<property name="visible">True</property>
+						<property name="label" translatable="yes">A trailing slash on the source directory avoids creating an additional directory level at the destination.
+You can think of a trailing / on a source as meaning &quot;copy the contents of this directory&quot; as opposed to &quot;copy the directory itself and its contents&quot;.
+
+In other words, each of the following commands copies the files in the same way:
+
+			 rsync -a /src/foo /dest
+			 rsync -a /src/foo/ /dest/foo
+</property>
+						<property name="justify">fill</property>
+						<property name="wrap">True</property>
+					</object>
+					<packing>
+						<property name="position">1</property>
+					</packing>
+				</child>
+				<child internal-child="action_area">
+					<object class="GtkHButtonBox" id="dialog-action_area5">
+						<property name="visible">True</property>
+						<property name="layout_style">center</property>
+						<child>
+							<object class="GtkButton" id="button_trailing_ok">
+								<property name="label">gtk-ok</property>
+								<property name="visible">True</property>
+								<property name="can_focus">True</property>
+								<property name="receives_default">True</property>
+								<property name="use_stock">True</property>
+								<signal name="clicked" handler="gtk_widget_hide" object="dialog_trailing"/>
+							</object>
+							<packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="pack_type">end</property>
+						<property name="position">0</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+		<action-widgets>
+			<action-widget response="0">button_trailing_ok</action-widget>
+		</action-widgets>
+	</object>
+</interface>

@@ -1,0 +1,840 @@
+# GREEK translation of grsync.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the grsync package.
+# FIRST AUTHOR <skarmoutsosv@gmail.com>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-23 15:21+0100\n"
+"PO-Revision-Date: 2016-07-30 15:07+0300\n"
+"Last-Translator: Vangelis Skarmoutsos <skarmoutsosv@gmail.com>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../grsync.glade.h:1
+msgid "Grsync"
+msgstr "Grsync"
+
+#: ../grsync.glade.h:2
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../grsync.glade.h:3
+msgid "Browse S_ource"
+msgstr "Πλοήγηση πρ_οέλευσης"
+
+#: ../grsync.glade.h:4
+msgid "Browse _Destination"
+msgstr "Πλοήγηση _Προορισμού"
+
+#: ../grsync.glade.h:5
+msgid "Switch source with destination"
+msgstr "Εναλλαγή πηγής με προορισμό"
+
+#: ../grsync.glade.h:6
+msgid "_Simulation"
+msgstr "_Εξομοίωση"
+
+#: ../grsync.glade.h:7
+msgid "_Rsync command line"
+msgstr "Γραμμή εντολών _Rsync"
+
+#: ../grsync.glade.h:8
+#, fuzzy
+msgid "Sess_ions"
+msgstr "Συνεδρίες"
+
+#: ../grsync.glade.h:9
+msgid "_Import"
+msgstr "_Εισαγωγή"
+
+#: ../grsync.glade.h:10
+msgid "_Export"
+msgstr "_Εξαγωγή"
+
+#: ../grsync.glade.h:11
+msgid "_Help"
+msgstr "_Aiuto"
+
+#: ../grsync.glade.h:12
+msgid "_Rsync info"
+msgstr "Info su _Rsync"
+
+#: ../grsync.glade.h:13
+msgid "_Contribute"
+msgstr "_Συνεισφορά"
+
+#: ../grsync.glade.h:14
+msgid "Click to add a new session"
+msgstr "Κάνε κλικ για προσθήκη νέας συνεδρίας"
+
+#: ../grsync.glade.h:15
+msgid "Click to delete the current session"
+msgstr "Κάνε κλικ για διαγραφή της τρέχουσας συνεδρίας"
+
+#: ../grsync.glade.h:16
+msgid ""
+"Show what would have been done, but actually do nothing (\"dry-run\" in "
+"rsync language)"
+msgstr ""
+"Εμφάνιση του τι θα είχε συμβεί, αλλά στην πραγματικότητα δεν κάνει τίποτα "
+"(\"dry-run\" στην γλώσσα του rsync)"
+
+#: ../grsync.glade.h:17
+msgid "_Simulate"
+msgstr "_Εξομοίωση"
+
+#: ../grsync.glade.h:18
+msgid "Make a full run (go!)"
+msgstr "Κάνε ένα πλήρες τρέξιμο (go!)"
+
+#: ../grsync.glade.h:19
+msgid "Preserve group"
+msgstr "Διατήρηση του group"
+
+#: ../grsync.glade.h:20
+msgid "Preserve time"
+msgstr "Διατήρηση χρόνου"
+
+#: ../grsync.glade.h:21
+msgid "Preserve permissions"
+msgstr "Διατήρηση αδειών"
+
+#: ../grsync.glade.h:22
+msgid "Preserve owner"
+msgstr "Διατήρηση ιδιοκτήτη"
+
+#: ../grsync.glade.h:23
+msgid "Do not leave filesystem"
+msgstr "Να μην φύγει από το σύστημα αρχείων"
+
+#: ../grsync.glade.h:24
+msgid "Do not cross filesystem boundaries"
+msgstr "Να μην διασταυρώνει τα όρια του συστήματος αρχείων"
+
+#: ../grsync.glade.h:25
+msgid "Delete on destination"
+msgstr "Διαγραφή στον προορισμό"
+
+#: ../grsync.glade.h:26
+msgid "Delete files in destination which are not present in the source"
+msgstr "Διαγραφή αρχείων στον προορισμό, τα οποία δεν είναι παρόντα στην πηγή"
+
+#: ../grsync.glade.h:27
+msgid "Verbose"
+msgstr "Φλύαρα"
+
+#: ../grsync.glade.h:28
+msgid "Show more information"
+msgstr "Εμφάνιση περισσότερων πληροφοριών"
+
+#: ../grsync.glade.h:29
+msgid "Show transfer progress"
+msgstr "Εμφάνιση προόδου μεταφοράς"
+
+#: ../grsync.glade.h:30
+msgid "Ignore existing"
+msgstr "Αγνόηση υπαρχόντων"
+
+#: ../grsync.glade.h:31
+msgid "Ignore files which already exist in the destination"
+msgstr "Αγνόηση αρχείων που ήδη υπάρχουν στον προορισμό"
+
+#: ../grsync.glade.h:32
+msgid "Size only"
+msgstr "Μόνο μέγεθος"
+
+#: ../grsync.glade.h:33
+msgid "Check size only, ignore time and checksum"
+msgstr "Έλεγχος μόνο μεγέθους, αγνόηση χρόνου και checksum"
+
+#: ../grsync.glade.h:34
+msgid "Skip newer"
+msgstr "Παράλειψη νεότερων"
+
+#: ../grsync.glade.h:35
+msgid "Do not update newer files"
+msgstr "Να μην ενημερώνονται νεώτερα αρχεία"
+
+#: ../grsync.glade.h:36
+msgid "Windows compatibility"
+msgstr "Συμβατότητα Windows"
+
+#: ../grsync.glade.h:37
+msgid "Provides workaround for a windows FAT filesystem limitation"
+msgstr ""
+"Παρέχει μια διόρθωση για τον περιορισμό του συστήματος αρχείων FAT των "
+"windows"
+
+#: ../grsync.glade.h:38
+msgid "Click to open the file browser"
+msgstr "Κάντε κλικ για να ανοίξετε τον περιηγητή αρχείων"
+
+#: ../grsync.glade.h:39
+msgid "Source directory"
+msgstr "Κατάλογος πηγής"
+
+#: ../grsync.glade.h:40
+msgid "Destination directory"
+msgstr "Κατάλογος προορισμού"
+
+#: ../grsync.glade.h:41
+msgid "Click here to switch the source with the destination directory"
+msgstr ""
+"Κάντε κλικ εδώ για να αλλάξετε τον κατάλογο της πηγής με του προορισμού"
+
+#: ../grsync.glade.h:42
+msgid "Source and Destination:"
+msgstr "Πηγή και προορισμός:"
+
+#: ../grsync.glade.h:43
+msgid "Basic options"
+msgstr "Βασικές επιλογές"
+
+#: ../grsync.glade.h:44
+msgid "Always checksum"
+msgstr "Πάντα checksum"
+
+#: ../grsync.glade.h:45
+msgid "Always compare file contents (by checksum)"
+msgstr "Πάντα σύγκριση περιεχομένων των αρχείων (με checksum)"
+
+#: ../grsync.glade.h:46
+msgid "Preserve devices"
+msgstr "Διατήρηση συσκευών"
+
+#: ../grsync.glade.h:47
+msgid "Only update existing files"
+msgstr "Ενημέρωση μόνο των υπάρχοντων αρχείων"
+
+#: ../grsync.glade.h:48
+msgid "Keep partially transferred files"
+msgstr "Κράτα τα μερικώς μετεφερθέντα αρχεία"
+
+#: ../grsync.glade.h:49
+msgid "Don't map uid/gid values"
+msgstr "Να μην αντιστιχοιθούν οι τιμές uid/gid"
+
+#: ../grsync.glade.h:50
+msgid "Keep numeric uid/gid instead of mapping user names and group names"
+msgstr ""
+"Κράτα τα αριθμητικά uid/gid αντί αντιστοίχισης ονομάτων χρηστών και ονομάτων "
+"ομάδων"
+
+#: ../grsync.glade.h:51
+msgid "Additional options:"
+msgstr "Πρόσθετες επιλογές:"
+
+#: ../grsync.glade.h:52
+msgid "Compress file data"
+msgstr "Συμπίεση δεδομένων αρχείου"
+
+#: ../grsync.glade.h:53
+msgid ""
+"Compress file data when transferring (useful only if at least one side is "
+"remote)"
+msgstr ""
+"Συμπίεση των δεδομένων αρχείου κατά την μεταφορά (χρήσιμο μόνο αν "
+"τουλάχιστον η μία πλευρά είναι απομακρυσμένη)"
+
+#: ../grsync.glade.h:54
+msgid "Copy symlinks as symlinks"
+msgstr "Αντιγραφή των symlinks ως symlinks"
+
+#: ../grsync.glade.h:55
+msgid "Symbolic links are copied as such, do not copy link target file"
+msgstr ""
+"Οι συμβολικοί δεσμοί αντιγράφονται με τέτοιο τρόπο ώστε να μην αντιγράφουν "
+"τα συνδεμένα αρχεία-στόχοι"
+
+#: ../grsync.glade.h:56
+msgid "Make backups"
+msgstr "Δημιουργία αντιγράφων ασφαλείας"
+
+#: ../grsync.glade.h:57
+msgid "Make backups of existing files on the destination"
+msgstr "Κάνε αντίγραφα ασφαλείας των υπάρχοντων αρχείων στον προορισμό"
+
+#: ../grsync.glade.h:58
+msgid "Copy hardlinks as hardlinks"
+msgstr "Αντιγραφή των hardlinks ως hardlinks"
+
+#: ../grsync.glade.h:59
+msgid "Hard links are copied as such, do not copy link target file"
+msgstr ""
+"Τα hardlink αντιγράφονται με τέτοιο τρόπο ώστε να μην αντιγραφούν τα "
+"συνδεδεμένα αρχεία-στόχοι"
+
+#: ../grsync.glade.h:60
+msgid "Show itemized changes list"
+msgstr "Εμφάνιση λίστας αλλαγών ανά αρχείο"
+
+#: ../grsync.glade.h:61
+msgid "Show additional information on every changed file"
+msgstr "Εμφάνιση πρόσθετων πληροφοριών για κάθε αρχείου που άλλαξε"
+
+#: ../grsync.glade.h:62
+msgid "Disable recursion"
+msgstr "Απενεργοποίηση recursion"
+
+#: ../grsync.glade.h:63
+msgid "If checked the subdirectories of the source folder will be ignored"
+msgstr "Αν επιλεχθεί, οι υποκατάλογοι του πηγαίου φακέλου θα αγνοηθούν"
+
+#: ../grsync.glade.h:64
+msgid "Additional command line options to pass to the rsync program"
+msgstr "Πρόσθετες επιλογές γραμμής εντολών για να περάσουν στο πρόγραμμα rsync"
+
+#: ../grsync.glade.h:65
+msgid "Protect remote args"
+msgstr "Προστασία απομακρυσμένων παραμέτρων"
+
+#: ../grsync.glade.h:66
+msgid ""
+"Protect remote arguments from shell expansion, Avoids the need to manually "
+"escape remote folders and other options which use file names like --exclude"
+msgstr ""
+"Προστασία απομακρυσμένων παραμέτρων από shell expansion. Αποφυγή της ανάγκης "
+"για χειροκίνητη χρήση escape σε απομακρυσμένους φακέλους και άλλες επιλογές "
+"που χρησιμοποιούν ονόματα αρχείων όπως --exclude"
+
+#: ../grsync.glade.h:67
+msgid "Advanced options"
+msgstr "Επιλογές για προχωρημένους"
+
+#: ../grsync.glade.h:68
+msgid "Execute this command before rsync:"
+msgstr "Εκτέλεση αυτής της εντολής πριν το rsync:"
+
+#: ../grsync.glade.h:69
+msgid ""
+"Click on this item if you want to run a command before syncing. Can be "
+"useful, for instance, to mount a filesystem before starting or to do some "
+"cleanup."
+msgstr ""
+"Κάνε κλικ σε αυτό το στοιχείο αν θέλεις να τρέξεις μια εντολή πριν τον "
+"συγχρονισμό. Μπορεί να είναι χρήσιμο, για παράδειγμα, στην προσάρτηση ενός "
+"συστήματος αρχείων πριν την έναρξη ή για να γίνει κάποια εκκαθάριση."
+
+#: ../grsync.glade.h:70
+msgid "Execute this command after rsync:"
+msgstr "Εκτέλεση αυτής της εντολής μετά το rsync:"
+
+#: ../grsync.glade.h:71
+msgid ""
+"Click on this item if you want to run a command after syncing. Can be "
+"useful, for instance, to unmount a filesystem at the end or to do some "
+"cleanup."
+msgstr ""
+"Κάνε κλικ εδώ αν θέλεις να τρέξεις μια εντολή μετά τον συγχρονισμό. Μπορεί "
+"να είναι χρήσιμο, για παράδειγμα, στην αποπροσάρτηση ενός συστήματος αρχείων "
+"στο τέλος ή για να γίνει κάποια εκκαθάριση"
+
+#: ../grsync.glade.h:72
+msgid "Browse files instead of folders"
+msgstr "Πλοήγηση αρχείων αντί φακέλων"
+
+#: ../grsync.glade.h:73
+msgid ""
+"By setting this switch, the browse source and destination buttons will open "
+"a dialog for selecting files instead of folders"
+msgstr ""
+"Ορίζοντας αυτό τον διακόπτη, τα κουμπιά πλοήγησης πηγής και προορισμού θα "
+"ανοίξουν ένα διάλογο για επιλογή αρχείων αντί φακέλων"
+
+#: ../grsync.glade.h:74
+msgid "Halt on failure"
+msgstr "Διακοπή αν συμβεί σφάλμα"
+
+#: ../grsync.glade.h:75
+msgid ""
+"When running the \"before\" command, if it fails for some reason, don't run "
+"rsync and halt"
+msgstr ""
+"Όταν τρέχει η εντολή  \"before\", αν αποτύχει για κάποιο λόγο, μην τρέξετε "
+"rsync and halt"
+
+#: ../grsync.glade.h:76
+msgid "On rsync error only"
+msgstr "Μόνο σε σφάλμα rsync"
+
+#: ../grsync.glade.h:77
+msgid ""
+"Execute the \"after\" command only if syncronization had errors.\n"
+"For example can be used to send an email only in the case there was "
+"trouble.\n"
+"Try a command like \"mail -s 'rsync error' you@domain.com\"."
+msgstr ""
+"Εκτέλεση την εντολής \"after\" μόνο αν ο συγχρονισμός είχε σφάλματα.\n"
+"Για παράδειγμα μπορεί να χρησιμοποιηθεί ώστε να στείλε email σε περίπτωση "
+"που υπήρχε πρόβλημα.\n"
+"Δοκιμάστε μια εντολή όπως \"mail -s 'errore rsync' you@domain.com\"."
+
+#: ../grsync.glade.h:80
+msgid "Notes:"
+msgstr "Σημειώσεις:"
+
+#: ../grsync.glade.h:81
+msgid "Free text notes on the current session"
+msgstr "Σημειώσεις με ελεύθερο κείμενο για την τρέχουσα συνεδρία"
+
+#: ../grsync.glade.h:82
+msgid "Run as superuser"
+msgstr "Τρέξιμο ως superuser"
+
+#: ../grsync.glade.h:83
+msgid ""
+"Run rsync with superuser (root, administrator) privileges. Use this if you "
+"need to access system files, for example when doing a full system backup."
+msgstr ""
+"Τρέξε το rsync με προνόμια υπερχρήστη (root, διαχειριστή). Χρησιμοποίησε το "
+"αν χρειάζεται να προσπελάσεις αρχεία συστήματος, για παράδειγμα όταν κάνεις "
+"αντίγραφη ασφαλείας του πλήρους συστήματος."
+
+#: ../grsync.glade.h:84
+msgid "Extra options"
+msgstr "Πρόσθετες επιλογές"
+
+#: ../grsync.glade.h:85
+msgid "Include these sessions:"
+msgstr "Συμπερίληψη αυτών των συνεδριών:"
+
+#: ../grsync.glade.h:86
+msgid "Set options"
+msgstr "Ορισμός επιλογών"
+
+#: ../grsync.glade.h:87
+msgid "Add session"
+msgstr "Προσθήκη συνεδρίας"
+
+#: ../grsync.glade.h:88
+msgid "Enter session name you want to create:"
+msgstr "Εισαγωγή του ονόματος συνεδρίας που θέλετε να δημιουργήσετε:"
+
+#: ../grsync.glade.h:89
+msgid "Enter the name of the new session to create"
+msgstr "Εισαγωγή του ονόματος της νέας συνεδρία για δημιουργία"
+
+#: ../grsync.glade.h:90
+msgid "Add as session set"
+msgstr "Προσθήκη ως σύνολο συνεδρίας"
+
+#: ../grsync.glade.h:91
+msgid "Create a new session set instead of a normal session"
+msgstr "Δημιουργία νέου συνόλου συνεδρίας αντί μιας κανονικής συνεδρίας"
+
+#: ../grsync.glade.h:92
+msgid "Grsync preferences"
+msgstr "Προτιμίσεις Grsync"
+
+#: ../grsync.glade.h:93
+msgid "Show rsync output by default"
+msgstr "Εμφάνιση εξόδου rsync από προεπιλογή"
+
+#: ../grsync.glade.h:94
+msgid ""
+"Wether to show rsync output by default or hide it (show graphical "
+"information only)"
+msgstr ""
+"Αν θα εμφανίζει την έξοδο του rsync από προεπιλογή ή αν θα την κρύβει "
+"(εμφάνιση μόνο γραφικών πληροφοριών)"
+
+#: ../grsync.glade.h:95
+msgid "Remember last used session"
+msgstr "Υπενθύμιση τελευταίας συνεδρίας"
+
+#: ../grsync.glade.h:96
+msgid "Whether to load the last used session at startup or use the default one"
+msgstr ""
+"Αν θα φορτώνει κατά την εκκίνηση την τελευταία συνεδρία που χρησιμοποιήθηκε "
+"ή αν θα φορτώνει την προκαθορισμένη"
+
+#: ../grsync.glade.h:97
+msgid "Show error list when finished"
+msgstr "Εμφάνιση λίστας σφαλμάτων όταν τελειώσει"
+
+#: ../grsync.glade.h:98
+msgid ""
+"When rsync has finished, show all the errors encountered in a separate window"
+msgstr ""
+"Όταν το rsync έχει τελειώσει, εμφανίζει όλα τα σφάλματα που συνέβησαν, σε "
+"ξεχωριστό παράθυρο"
+
+#: ../grsync.glade.h:99
+msgid "Enable logging"
+msgstr "Ενεργοποίηση καταγραφών"
+
+#: ../grsync.glade.h:100
+msgid ""
+"Whether to save rsync output to a log file, named like the session, which "
+"will be located in the grsync directory (usually \".grsync\" into your user "
+"home)"
+msgstr ""
+"Αν τα αποθηκεύει την έξοδο του rsync σε ένα αρχείο καταγραφών, με όνομα όπως "
+"η συνεδρία, που βρίσκεται στον κατάλογο του grsync (συνήθως \".grsync\" μέσα "
+"στον αρχικό φάκελο του χρήστη)"
+
+#: ../grsync.glade.h:101
+msgid "Enter the rsync command to use, eventually including its full path"
+msgstr ""
+"Εισαγωγή της εντολής rsync που θα χρησιμοποιηθεί, συμπεριλαμβάνοντας το "
+"πλήρες μονοπάτι"
+
+#: ../grsync.glade.h:102
+msgid "Rsync executable:"
+msgstr "Εκτελέσιμο rsync:"
+
+#: ../grsync.glade.h:103
+msgid "Fast rsync output scrolling"
+msgstr "Γρήγορη ολίσθηση εξόδου rsync"
+
+#: ../grsync.glade.h:104
+msgid ""
+"Select this if you want rsync output to scroll many lines at a time, in "
+"order to be faster"
+msgstr ""
+"Επιλέξτε αυτό αν θέλετε η έξοδος του rsync να ολισθαίνει πολλές σειρές κάθε "
+"φορά, προκειμένου να είναι γρηγορότερη"
+
+#: ../grsync.glade.h:105
+msgid "Enable switch button"
+msgstr "Ενεργοποίηση διακόπτη εναλλαγής"
+
+#: ../grsync.glade.h:106
+msgid ""
+"Select this if you want an additional \"switch source with destination\" "
+"button in the basic options tab"
+msgstr ""
+"Ενεργοποιήστε αυτό αν θέλετε ένα πρόσθετο κουμπί \"Εναλλαγή πηγής με "
+"προορισμό\" να εμφανιστεί στην καρτέλα με τις βασικές επιλογές"
+
+#: ../grsync.glade.h:107
+msgid "Use tray icon"
+msgstr "Χρήση εικονιδίου tray"
+
+#: ../grsync.glade.h:108
+msgid ""
+"Check this box to show an icon of the application in the system tray instead "
+"of the application bar (may not work on Unity environments, like Ubuntu >= "
+"11.4)"
+msgstr ""
+"Επιλέξτε αυτό το κουτί για να εμφανίσετε ένα εικονίδιο της εφαρμογής στο "
+"system tray αντί στην γραμμή εφαρμογών (μπορεί να μην λειτουργήσει σε "
+"περιβάλοντα Unity, όπως το Ubuntu >= 11.4)"
+
+#: ../grsync.glade.h:109
+msgid "Overwrite logs"
+msgstr "Επικάλυψη καταγραφών"
+
+#: ../grsync.glade.h:110
+msgid ""
+"Whether to overwrite the logs when running a session. This will make you "
+"save space, but you'll loose the logs of the previous runs"
+msgstr ""
+"Αν θα γράψει πάνω από τις καταγραφές όταν τρέχει μια συνεδρία. Αυτό θα σας "
+"γλυτώσει χώρο, αλλά θα χάσετε τις καταγραφές των προηγούμενων τρεξιμάτων "
+
+#: ../grsync.glade.h:111
+msgid "Errors list"
+msgstr "Λίστα σφαλμάτων"
+
+#: ../grsync.glade.h:112
+msgid "Error list of last rsync run:"
+msgstr "Λίστα σφαλμάτων της τελευταίας εκτέλεσης του rsync:"
+
+#: ../grsync.glade.h:113
+msgid "rsync"
+msgstr "rsync"
+
+#: ../grsync.glade.h:114
+msgid "Idle"
+msgstr "Αδρανές"
+
+#: ../grsync.glade.h:115
+msgid "Transfer progress of current file"
+msgstr "Πρόοδος μεταφοράς του τρέχοντος αρχείου"
+
+#: ../grsync.glade.h:116
+msgid "Global progress"
+msgstr "Γενική πρόοδος"
+
+#: ../grsync.glade.h:117
+msgid ""
+"Global transfer progress: works only with rsync version 2.6.1 or newer, and "
+"may report wrong values depending on the ability of rsync to estimate the "
+"files to be copied in advance"
+msgstr ""
+"Γενική πρόοδος μεταφορές: λειτουργεί μόνο με την έκδροση 2.6.1 του rsync ή "
+"νεότερη, και μπορεί να αναφέρει εσφαλμένες τιμές ανάλογα με την ικανότητα "
+"του rsync να υπολογίζει εκ των προτέρων τα αρχεία που πρόκειτε να αντιγραφούν"
+
+#: ../grsync.glade.h:118
+msgid "Rsync output:"
+msgstr "Έξοδος rsync:"
+
+#: ../grsync.glade.h:119
+msgid "Click this button to show the error list"
+msgstr "Κάνε κλικ σε αυτό το κουμπί για εμφάνιση της λίστας σφαλμάτων"
+
+#: ../grsync.glade.h:120
+msgid "Pause/resume rsync run"
+msgstr "Παύση/επαναφορά εκτέλεσης του rsync"
+
+#: ../grsync.glade.h:121
+msgid "Stops rsync and closes the window"
+msgstr "Διακοπή του rsync και κλείσιμο του παραθύρου"
+
+#: ../grsync.glade.h:122
+msgid "About trailing slashes"
+msgstr "Σχετικά με τις καταληκτικές καθέτους"
+
+#: ../grsync.glade.h:123
+msgid ""
+"A trailing slash on the source directory avoids creating an additional "
+"directory level at the destination.\n"
+"You can think of a trailing / on a source as meaning \"copy the contents of "
+"this directory\" as opposed to \"copy the directory itself and its contents"
+"\".\n"
+"\n"
+"In other words, each of the following commands copies the files in the same "
+"way:\n"
+"\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+msgstr ""
+"Μια καταληκτική κάθετος σε ένα κατάλογο πηγής αποτρέπει την δημιουργία "
+"πρόσθετου επιπέδου καταλόγου στον προορισμό.\n"
+"Μπορείτε να σκεφτείτε το καταληκτικό / σε μια πηγή, σαν να σημαίνει "
+"\"αντέγραψε τα περιεχόμενα αυτού του καταλόγου\" σε αντίθεση με το "
+"\"αντέγραψε τον ίδιο τον κατάλογο και τα περιεχόμενα του\"\n"
+"\n"
+"Με άλλα λόγια, καθεμία από τις ακόλουθες εντολές αντιγράφεις τα αρχεία με "
+"τον ίδιο τρόπο:\n"
+"\n"
+"\t\t\t rsync -a /src/foo /dest\n"
+"\t\t\t rsync -a /src/foo/ /dest/foo\n"
+
+#: ../src/main.c:49
+#, c-format
+msgid "Error: conflicting arguments\n"
+msgstr "Σφάλμα: διένεξη παραμέτρων\n"
+
+#: ../src/callbacks.c:137
+#, c-format
+msgid "(ERROR) Can't open config file! Maybe this is the first run?\n"
+msgstr ""
+"(ΣΦΑΛΜΑ) Δεν μπορεί να ανοιχτεί το αρχείο ρυθμίσεων! Μήπως είναι το πρώτο "
+"τρέξιμο;\n"
+
+#: ../src/callbacks.c:381 ../src/callbacks.c:1256
+#, c-format
+msgid "\tUnable to save settings!\n"
+msgstr "\tΔεν είναι δυνατή η αποθήκευση των ρυθμίσεων!\n"
+
+#: ../src/callbacks.c:474 ../src/callbacks.c:499 ../src/callbacks.c:1404
+#: ../src/callbacks.c:1429
+msgid "Browse"
+msgstr "Πλοήγηση"
+
+#: ../src/callbacks.c:534
+#, c-format
+msgid "%.f%% (%li:%02li elapsed, %li:%02li remaining)"
+msgstr "%.f%% (%li:%02li παρήλθε, %li:%02li απομένει)"
+
+#: ../src/callbacks.c:684
+msgid "Simulation in progress"
+msgstr "Εξομοίωση σε εξέλιξη"
+
+#: ../src/callbacks.c:735
+msgid "The session you specified on the command line doesn't exists"
+msgstr "Η συνεδρία που ορίσατε στην γραμμή εντολών δεν υπάρχει"
+
+#: ../src/callbacks.c:748
+msgid ""
+"Unable to execute the rsync command line tool. It is needed by this program. "
+"You may need to install the rsync package or make it available in the "
+"default executable search PATH. See file/preferences to change the default "
+"rsync executable command."
+msgstr ""
+"Δεν ήταν δυνατό να εκτελεστεί το εργαλείο γραμμής εντολών rsync. Χρειάζεται "
+"από αυτό το πρόγραμμα. Ίσως χρειάζεται να εγκαταστήσετε το πακέτο rsync ή να "
+"το κάνετε διαθέσιμο στο PATH. Δείτε αρχείο/προτιμίσεις για να αλλάξετε την "
+"προκαθορισμένη εκτελέσιμη εντολή."
+
+#: ../src/callbacks.c:868
+msgid "** Launching AFTER command:\n"
+msgstr "** Εκκίνηση εντολής AFTER:\n"
+
+#: ../src/callbacks.c:883
+msgid "<span foreground=\"red\" weight=\"bold\">Completed with errors!</span>"
+msgstr ""
+"<span foreground=\"red\" weight=\"bold\">Ολοκληρώθηκε με σφάλματα!</span>"
+
+#: ../src/callbacks.c:886
+msgid ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Completed successfully!</span>"
+msgstr ""
+"<span foreground=\"darkgreen\" weight=\"bold\">Ολοκληρώθηκε επιτυχώς!</span>"
+
+#: ../src/callbacks.c:1019
+msgid "Rsync process exit status: "
+msgstr "Κατάσταση εξόδου του process rsync: "
+
+#: ../src/callbacks.c:1096
+msgid "** Launching BEFORE command:\n"
+msgstr "** Εκτέλεση εντολής BEFORE:\n"
+
+#: ../src/callbacks.c:1106
+msgid "** Launching RSYNC command (simulation mode):\n"
+msgstr "** Εκτέλεση εντολής RSYNC (κατάσταση εξομοίωσης):\n"
+
+#: ../src/callbacks.c:1107
+msgid "** Launching RSYNC command:\n"
+msgstr "** Εκτέλεση εντολής RSYNC:\n"
+
+#: ../src/callbacks.c:1150
+msgid "Cannot execute rsync"
+msgstr "Αδύνατη η εκτέλεση του rsync"
+
+#: ../src/callbacks.c:1195
+msgid "This session name is reserved, you cannot call it like this"
+msgstr ""
+"Αυτό το όνομα συνεδρίας είναι δεσμευμένο, δεν μπορείτε να το ονομάσετε έτσι"
+
+#: ../src/callbacks.c:1205
+msgid "A session named like this already exists"
+msgstr "Ένα τέτοιο όνομα συνεδρίας ήδη υπάρχει"
+
+#: ../src/callbacks.c:1233
+msgid "You cannot delete the default session"
+msgstr "Δεν μπορείτε να διαγράψετε την προκαθορισμένη συνεδρία"
+
+#: ../src/callbacks.c:1240
+#, c-format
+msgid "Are you sure you want to delete the '%s' session?"
+msgstr "Σίγουρα θέλεις να διαγράψεις την συνεδρία '%s' ;"
+
+#: ../src/callbacks.c:1270
+msgid "Application icons by Roberto Gadotti <info@kuama.net>"
+msgstr "Εικονίδια εφαρμογής από Roberto Gadotti <info@kuama.net>"
+
+#: ../src/callbacks.c:1275
+msgid "Written by Piero Orsoni <orsoni@gmail.com>"
+msgstr "Γράφτηκε από Piero Orsoni <orsoni@gmail.com>"
+
+#: ../src/callbacks.c:1276
+msgid "Additional bug-fixing by Luca Marturana <lucamarturana@gmail.com>"
+msgstr ""
+"Πρόσθετες διορθώσεις σφαλμάτων από Luca Marturana <lucamarturana@gmail.com>"
+
+#: ../src/callbacks.c:1278
+msgid "Dutch translation by Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+msgstr "Μετάφραση σε Ολλανδικά από Frank de Bruijn <f.d.de.bruijn@gmail.com>"
+
+#: ../src/callbacks.c:1279
+msgid "Simplified Chinese translation by Xie Yanbo <xieyanbo@gmail.com>"
+msgstr "Μετάφραση σε απλοποιημένα Κινέζικα από Xie Yanbo <xieyanbo@gmail.com>"
+
+#: ../src/callbacks.c:1280
+msgid "French translation by xavier <ersplus@free.fr>"
+msgstr "Μετάφραση σε Γαλλικά xavier <ersplus@free.fr>"
+
+#: ../src/callbacks.c:1281
+msgid "Swedish translation by Daniel Nylander <info@danielnylander.se>"
+msgstr "Μετάφραση σε Σουηδικά από Daniel Nylander <info@danielnylander.se>"
+
+#: ../src/callbacks.c:1282
+msgid "Turkish translation by Doruk Fisek <dfisek@fisek.com.tr>"
+msgstr "Μετάφραση σε Τουρκικά από Doruk Fisek <dfisek@fisek.com.tr>"
+
+#: ../src/callbacks.c:1283
+msgid "Russian translation by Evgenii Terechkov <evg@altlinux.ru>"
+msgstr "Μετάφραση σε Ρωσικά από Evgenii Terechkov <evg@altlinux.ru>"
+
+#: ../src/callbacks.c:1284
+msgid "German translation by Martin Lettner <m.lettner@gmail.com>"
+msgstr "Μετάφραση σε Γερμανικά από Martin Lettner <m.lettner@gmail.com>"
+
+#: ../src/callbacks.c:1285
+msgid "Spanish translation by Ibon Castilla Varela <estri@euskalnet.net>"
+msgstr "Μετάφραση σε Ισπανικά από Ibon Castilla Varela <estri@euskalnet.net>"
+
+#: ../src/callbacks.c:1286
+msgid "Czech translation by Martin Balajka <m.balajka@gmail.com>"
+msgstr "Μετάφραση σε Τσέχικα από Martin Balajka <m.balajka@gmail.com>"
+
+#: ../src/callbacks.c:1287
+msgid "Galician translation by Daniel Espinheira <daniel.espinheira@gmail.com>"
+msgstr ""
+"Μετάφραση σε Γαλικικά από Daniel Espinheira <daniel.espinheira@gmail.com>"
+
+#: ../src/callbacks.c:1288
+msgid "Catalan translation by Josep Sànchez <josep.sanchez@ubuntu.cat>"
+msgstr "Μετάφραση σε Καταλανικά από Josep Sànchez <josep.sanchez@ubuntu.cat>"
+
+#: ../src/callbacks.c:1289
+msgid ""
+"Brazilian Portuguese translation by Fábio Nogueira <deb-user-ba@ubuntu.com>"
+msgstr ""
+"Μετάφρασε σε Πορτογαλικά Βραζιλίας από Fábio Nogueira <deb-user-ba@ubuntu."
+"com>"
+
+#: ../src/callbacks.c:1290
+msgid "Indonesian translation by Waluyo Adi Siswanto <was.uthm@gmail.com>"
+msgstr "Μετάφραση σε Ινδονησιακά από Waluyo Adi Siswanto <was.uthm@gmail.com>"
+
+#: ../src/callbacks.c:1291
+msgid "Croatian translation by Bojan Vondra <bojanvondra@hotmail.com>"
+msgstr "Μετάφραση σε Κροατικά από Bojan Vondra <bojanvondra@hotmail.com>"
+
+#: ../src/callbacks.c:1295
+msgid "Synchronize files and folders (a GTK GUI for rsync)."
+msgstr "Συγχρονισμός αρχείων και φακέλων (ένα GTK GUI για το rsync)."
+
+#: ../src/callbacks.c:1296
+msgid ""
+"(C) Piero Orsoni and others. Released under the GPL.\n"
+"See COPYING for details"
+msgstr ""
+"(C) Piero Orsoni και άλλοι. Διανέμεται υπό την GPL.\n"
+"Δείτε το COPYING για λεπτομέρειες"
+
+#: ../src/callbacks.c:1414
+msgid "Session imported"
+msgstr "Η συνεδρία εισήχθηκε"
+
+#: ../src/callbacks.c:1440
+msgid "Session exported"
+msgstr "Η συνεδρία εξάχθηκε"
+
+#~ msgid "Maemo compatibility by Luca Donaggio <donaggio@gmail.com>"
+#~ msgstr "Συμβατότητα Maemo από Luca Donaggio <donaggio@gmail.com>"
+
+#~ msgid "rsync: running"
+#~ msgstr "rsync: τρέχει"
+
+#~ msgid "rsync: stopped"
+#~ msgstr "rsync: σταμάτησε"
+
+#~ msgid "rsync: paused"
+#~ msgstr "rsync: σε παύση"
+
+#~ msgid ""
+#~ "<b>Source and Destination</b> <i>(directories need a trailing \"/\")</i>"
+#~ msgstr ""
+#~ "<b>Πηγή και προορισμός</b> <i>(οι κατάλογοι χρειάζονται '/' στο τέλος)</i>"
+
+#~ msgid "Error: missing filename\n"
+#~ msgstr "Σφάλμα: λείπει το όνομα αρχείου\n"
+
+#~ msgid "A GTK GUI for rsync"
+#~ msgstr "Ένα GTK GUI για το rsync"
+
+#~ msgid "<b>Sessions</b>"
+#~ msgstr "<b>Συνεδρίες</b>"

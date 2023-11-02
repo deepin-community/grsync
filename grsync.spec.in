@@ -1,0 +1,45 @@
+Name:           grsync
+Version:        @VERSION@
+Release:        1%{?dist}
+Summary:        A GUI for rsync
+Group:          Applications/Internet
+License:        GPL
+URL:            http://www.opbyte.it/grsync/
+Source0:        http://www.opbyte.it/release/grsync-@VERSION@.tar.gz
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires:  gettext-devel, gtk2-devel >= 2.0.0
+Requires:       gettext, gtk2 >= 2.0.0, rsync
+
+%description
+Grsync is a GUI for rsync, the command-line directory synchronization
+tool. It is in beta stage and doesn't support all of rsync features,
+but can be effectively used to synchronize local directories. For
+example some people use grsync to synchronize their music collection
+with removable devices or to backup personal files to a networked drive. 
+
+%prep
+%setup -q
+
+%build
+%configure
+make %{?_smp_mflags}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+%makeinstall
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+%doc AUTHORS ChangeLog COPYING INSTALL NEWS README
+%{_bindir}/grsync
+%{_mandir}/man1/grsync.1*
+%{_datadir}/applications/grsync.desktop
+%{_datadir}/locale/fr_FR/LC_MESSAGES/grsync.mo
+%{_datadir}/locale/it_IT/LC_MESSAGES/grsync.mo
+%{_datadir}/locale/nl_NL/LC_MESSAGES/grsync.mo
+%{_datadir}/locale/sv_SE/LC_MESSAGES/grsync.mo
+%{_datadir}/locale/zh_CN/LC_MESSAGES/grsync.mo
+%{_datadir}/pixmaps/grsync.png
